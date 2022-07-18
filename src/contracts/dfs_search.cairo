@@ -2,6 +2,8 @@ from src.data_types.data_types import Node
 from starkware.cairo.common.default_dict import default_dict_new, default_dict_finalize
 from starkware.cairo.common.dict_access import DictAccess
 from starkware.cairo.common.alloc import alloc
+from starkware.cairo.common.math_cmp import is_le
+
 from src.utils.array_utils import Stack
 
 from starkware.cairo.common.memcpy import memcpy
@@ -18,7 +20,7 @@ func init_dict() -> (dict_ptr : DictAccess*):
     return (dict_end)
 end
 
-func init_dfs(
+func init_dfs{range_check_ptr}(
     graph_len : felt,
     graph : Node*,
     neighbors : felt*,
@@ -47,7 +49,7 @@ func init_dfs(
     return (saved_paths_len, saved_paths)
 end
 
-func DFS_rec{dict_ptr : DictAccess*}(
+func DFS_rec{dict_ptr : DictAccess*, range_check_ptr}(
     graph_len : felt,
     graph : Node*,
     neighbors : felt*,
@@ -66,9 +68,6 @@ func DFS_rec{dict_ptr : DictAccess*}(
         current_path_len, current_path, current_node.index
     )
 
-    let last_node = current_path[current_path_len - 1]
-    # %{ print(ids.last_node, " - ", ids.current_path_len) %}
-
     # When we return from this recursive function, we want to:
     # 1. Update the saved_paths array with the current path if it is a valid path. Since we're working with a pointer
     # to the saved_paths array that never changes, we just need to update its length
@@ -82,8 +81,15 @@ func DFS_rec{dict_ptr : DictAccess*}(
         let (saved_paths_len) = save_path(
             current_path_len, current_path, saved_paths_len + 1, saved_paths
         )
-        let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
-        return (saved_paths_len, current_path_len, current_path)
+        # let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
+        # return (saved_paths_len, current_path_len, current_path)
+        tempvar current_path_len = current_path_len
+        tempvar current_path = current_path
+        tempvar saved_paths_len = saved_paths_len
+    else:
+        tempvar current_path_len = current_path_len
+        tempvar current_path = current_path
+        tempvar saved_paths_len = saved_paths_len
     end
 
     let (saved_paths_len, current_path_len, current_path, _, _) = visit_successors{
@@ -104,7 +110,7 @@ func DFS_rec{dict_ptr : DictAccess*}(
     return (saved_paths_len, current_path_len, current_path)
 end
 
-func visit_successors{dict_ptr : DictAccess*}(
+func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
     graph_len : felt,
     graph : Node*,
     neighbors : felt*,
@@ -139,8 +145,10 @@ func visit_successors{dict_ptr : DictAccess*}(
 
     # No more successors
     if successors_len == 0:
+        %{ print(f" Node{ids.current_node.index} has no successors left to explore ") %}
+        # dict_write{dict_ptr=dict_ptr}(key=current_node.index, new_value=2)
         let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
-
+        # explore previous_node's next_successor
         return (saved_paths_len, current_path_len, current_path, successors_len - 1, remaining_hops)
     end
 
@@ -148,6 +156,7 @@ func visit_successors{dict_ptr : DictAccess*}(
     if remaining_hops == 0:
         %{ print(f" Too many hops. current path len ") %}
         let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
+        # explore previous_node's next_successor
         return (saved_paths_len, current_path_len, current_path, successors_len - 1, remaining_hops)
     end
 
@@ -156,6 +165,7 @@ func visit_successors{dict_ptr : DictAccess*}(
     let successor_index = successor.index
     let (is_already_visited) = is_in_path(current_path_len, current_path, successor_index)
     if is_already_visited == 1:
+        %{ print(f" Node {ids.successor_index} already in path, returning ") %}
         return visit_successors(
             graph_len=graph_len,
             graph=graph,
@@ -180,7 +190,12 @@ func visit_successors{dict_ptr : DictAccess*}(
     local saved_paths_len_updated : felt
     local current_path_updated : felt*
     local current_path_len_updated : felt
-    if successor_visit_state == 0:
+
+    # TODO THE PROBLEM IS HERE
+    # WHEN WE GO BACK TO THE FIRST NODE, OF INDEX 0
+    # WE DON'T VISIT ROUTE 0>1 BECAUSE 1 IS GREY
+    let (is_state_1_or_0) = is_le(successor_visit_state, 1)
+    if is_state_1_or_0 == 1:
         # assert current_path[current_path_len] = successor_index
         let (saved_paths_len, current_path_len, current_path) = DFS_rec(
             graph_len=graph_len,
@@ -197,10 +212,15 @@ func visit_successors{dict_ptr : DictAccess*}(
         saved_paths_len_updated = saved_paths_len
         current_path_len_updated = current_path_len
         current_path_updated = current_path
+        tempvar dict_ptr = dict_ptr
+        tempvar range_check_ptr = range_check_ptr
     else:
+        %{ print(f"already visited {ids.successor_index}") %}
         saved_paths_len_updated = saved_paths_len
         current_path_len_updated = current_path_len
         current_path_updated = current_path
+        tempvar dict_ptr = dict_ptr
+        tempvar range_check_ptr = range_check_ptr
     end
 
     #
@@ -227,19 +247,17 @@ end
 # @notice returns the index of the node in the graph
 # @returns -1 if it's not in the graph
 # @returns array index otherwise
-func is_in_path(current_path_len : felt, current_path : felt*, identifier : felt) -> (
-    boolean : felt
-):
+func is_in_path(current_path_len : felt, current_path : felt*, index : felt) -> (boolean : felt):
     if current_path_len == 0:
         return (0)
     end
 
-    let current_identifier : felt = current_path[current_path_len - 1]
-    if current_identifier == identifier:
+    let current_index : felt = [current_path]
+    if current_index == index:
         return (1)
     end
 
-    return is_in_path(current_path_len - 1, current_path + 1, identifier)
+    return is_in_path(current_path_len - 1, current_path + 1, index)
 end
 
 func save_path(
