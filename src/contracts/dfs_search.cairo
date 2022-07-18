@@ -2,7 +2,9 @@ from src.data_types.data_types import Node
 from starkware.cairo.common.default_dict import default_dict_new, default_dict_finalize
 from starkware.cairo.common.dict_access import DictAccess
 from starkware.cairo.common.alloc import alloc
+from src.utils.array_utils import Stack
 
+from starkware.cairo.common.memcpy import memcpy
 from starkware.cairo.common.dict import dict_write, dict_update, dict_read
 
 const MAX_FELT = 2 ** 251 - 1
@@ -11,7 +13,7 @@ const MAX_HOPS = 4
 func init_dict() -> (dict_ptr : DictAccess*):
     alloc_locals
 
-    let (local dict_start) = default_dict_new(default_value=7)
+    let (local dict_start) = default_dict_new(default_value=0)
     let dict_end = dict_start
     return (dict_end)
 end
@@ -23,27 +25,26 @@ func init_dfs(
     start_node : Node,
     destination_node : Node,
     max_hops : felt,
-) -> ():
+) -> (saved_paths_len : felt, saved_paths : felt*):
     alloc_locals
     let (dict_ptr : DictAccess*) = init_dict()
-    let (my_stack : felt*) = alloc()
     let (saved_paths : felt*) = alloc()
     let (current_path : felt*) = alloc()
-    current_path[0] = start_node.index
+    # current_path[0] = start_node.index
 
-    DFS_rec{dict_ptr=dict_ptr}(
-        graph_len,
-        graph,
-        neighbors,
-        start_node,
-        destination_node,
-        4,
-        1,
-        current_path,
-        0,
-        saved_paths,
+    let (saved_paths_len, _, _) = DFS_rec{dict_ptr=dict_ptr}(
+        graph_len=graph_len,
+        graph=graph,
+        neighbors=neighbors,
+        current_node=start_node,
+        destination_node=destination_node,
+        max_hops=max_hops,
+        current_path_len=0,
+        current_path=current_path,
+        saved_paths_len=0,
+        saved_paths=saved_paths,
     )
-    return ()
+    return (saved_paths_len, saved_paths)
 end
 
 func DFS_rec{dict_ptr : DictAccess*}(
@@ -57,29 +58,55 @@ func DFS_rec{dict_ptr : DictAccess*}(
     current_path : felt*,
     saved_paths_len : felt,
     saved_paths : felt*,
-) -> (all_paths_len : felt, all_paths : Node**):
+) -> (saved_paths_len : felt, current_path_len : felt, current_path : felt*):
+    alloc_locals
     dict_write{dict_ptr=dict_ptr}(key=current_node.index, new_value=1)
-    # let node_successors_len = neighbors[current_node.index]
-    # let node_successors = current_node.neighbor_nodes
-    visit_successors{dict_ptr=dict_ptr}(
-        graph_len,
-        graph,
-        neighbors,
-        current_node,
-        destination_node,
-        max_hops,
-        neighbors[current_node.index],
-        current_path_len,
-        current_path,
-        saved_paths_len,
-        saved_paths
+
+    let (current_path_len, current_path) = Stack.put(
+        current_path_len, current_path, current_node.index
     )
-    return ()
+
+    let last_node = current_path[current_path_len - 1]
+    # %{ print(ids.last_node, " - ", ids.current_path_len) %}
+
+    # When we return from this recursive function, we want to:
+    # 1. Update the saved_paths array with the current path if it is a valid path. Since we're working with a pointer
+    # to the saved_paths array that never changes, we just need to update its length
+    # 2. Update the current_path array, after trimming the last elem.
+    # 3. Update the current_path_len, after trimming the last elem.
+    # 5. Incrementing the remaining_hops since we're going up in the recursion stack
+
+    if current_node.identifier == destination_node.identifier:
+        # store current path length inside saved_paths
+        assert saved_paths[saved_paths_len] = current_path_len
+        let (saved_paths_len) = save_path(
+            current_path_len, current_path, saved_paths_len + 1, saved_paths
+        )
+        let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
+        return (saved_paths_len, current_path_len, current_path)
+    end
+
+    let (saved_paths_len, current_path_len, current_path, _, _) = visit_successors{
+        dict_ptr=dict_ptr
+    }(
+        graph_len=graph_len,
+        graph=graph,
+        neighbors=neighbors,
+        current_node=current_node,
+        destination_node=destination_node,
+        remaining_hops=max_hops,
+        successors_len=neighbors[current_node.index],
+        current_path_len=current_path_len,
+        current_path=current_path,
+        saved_paths_len=saved_paths_len,
+        saved_paths=saved_paths,
+    )
+    return (saved_paths_len, current_path_len, current_path)
 end
 
 func visit_successors{dict_ptr : DictAccess*}(
     graph_len : felt,
-    graph : felt*,
+    graph : Node*,
     neighbors : felt*,
     current_node : Node,
     destination_node : Node,
@@ -87,35 +114,98 @@ func visit_successors{dict_ptr : DictAccess*}(
     successors_len : felt,
     current_path_len : felt,
     current_path : felt*,
-    saved_paths_len:felt,
-    saved_paths:felt*
+    saved_paths_len : felt,
+    saved_paths : felt*,
+) -> (
+    saved_paths_len : felt,
+    current_path_len : felt,
+    current_path : felt*,
+    successors_len : felt,
+    remaining_hops : felt,
 ):
     alloc_locals
+
+    # When we return from this recursive function, we want to:
+    # 1. Update the saved_paths array with the current path if it is a valid path. Since we're working with a pointer
+    # to the saved_paths array that never changes, we just need to update its length
+    # 2. Update the current_path array, after trimming the last elem.
+    # 3. Update the current_path_len, after trimming the last elem.
+    # 4. Update the successors_len
+    # 5. Incrementing the remaining_hops since we're going up in the stack
+
+    #
+    # Return conditions
+    #
+
+    # No more successors
     if successors_len == 0:
-        return ()
+        let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
+
+        return (saved_paths_len, current_path_len, current_path, successors_len - 1, remaining_hops)
     end
 
-    let successor = current_node[successors_len - 1]
-    let (successor_index) = successor.index
+    # Hops greater than limit
+    if remaining_hops == 0:
+        %{ print(f" Too many hops. current path len ") %}
+        let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
+        return (saved_paths_len, current_path_len, current_path, successors_len - 1, remaining_hops)
+    end
+
+    # Already visited successor, avoid cycles
+    let successor = current_node.neighbor_nodes[successors_len - 1]
+    let successor_index = successor.index
+    let (is_already_visited) = is_in_path(current_path_len, current_path, successor_index)
+    if is_already_visited == 1:
+        return visit_successors(
+            graph_len=graph_len,
+            graph=graph,
+            neighbors=neighbors,
+            current_node=current_node,
+            destination_node=destination_node,
+            remaining_hops=remaining_hops,
+            successors_len=successors_len - 1,
+            current_path_len=current_path_len,
+            current_path=current_path,
+            saved_paths_len=saved_paths_len,
+            saved_paths=saved_paths,
+        )
+    end
+
+    #
+    # Go deeper in the recursion (do DFSrec from current node)
+    #
+
     let (successor_visit_state) = dict_read{dict_ptr=dict_ptr}(key=successor_index)
 
-    local saved_paths_len
+    local saved_paths_len_updated : felt
+    local current_path_updated : felt*
+    local current_path_len_updated : felt
     if successor_visit_state == 0:
-        current_path[current_path_len] = successor_index
-        DFS_rec(
+        # assert current_path[current_path_len] = successor_index
+        let (saved_paths_len, current_path_len, current_path) = DFS_rec(
             graph_len=graph_len,
             graph=graph,
             neighbors=neighbors,
             current_node=successor,
             destination_node=destination_node,
-            max_hops = remaining_hops - 1,
-            neighbors[successor.index],
-            current_path_len + 1,
-            current_path,
-            saved_paths_len,
-            saved_paths
+            max_hops=remaining_hops - 1,
+            current_path_len=current_path_len,
+            current_path=current_path,
+            saved_paths_len=saved_paths_len,
+            saved_paths=saved_paths,
         )
+        saved_paths_len_updated = saved_paths_len
+        current_path_len_updated = current_path_len
+        current_path_updated = current_path
+    else:
+        saved_paths_len_updated = saved_paths_len
+        current_path_len_updated = current_path_len
+        current_path_updated = current_path
     end
+
+    #
+    # Visit next successor (decrement successors_len)
+    #
 
     return visit_successors(
         graph_len=graph_len,
@@ -123,13 +213,59 @@ func visit_successors{dict_ptr : DictAccess*}(
         neighbors=neighbors,
         current_node=current_node,
         destination_node=destination_node,
-        remaining_hops = remaining_hops,
-        successors_len = successors_len - 1,
-        current_path_len=current_path_len,
-        current_path=current_path,
-        saved_paths_len=saved_paths_len,
-        saved_paths=saved_paths
+        remaining_hops=remaining_hops,
+        successors_len=successors_len - 1,
+        current_path_len=current_path_len_updated,
+        current_path=current_path_updated,
+        saved_paths_len=saved_paths_len_updated,
+        saved_paths=saved_paths,
     )
 
-    return ()
+    # return (saved_paths_len, current_path_len, current_path, successors_len, remaining_hops)
 end
+
+# @notice returns the index of the node in the graph
+# @returns -1 if it's not in the graph
+# @returns array index otherwise
+func is_in_path(current_path_len : felt, current_path : felt*, identifier : felt) -> (
+    boolean : felt
+):
+    if current_path_len == 0:
+        return (0)
+    end
+
+    let current_identifier : felt = current_path[current_path_len - 1]
+    if current_identifier == identifier:
+        return (1)
+    end
+
+    return is_in_path(current_path_len - 1, current_path + 1, identifier)
+end
+
+func save_path(
+    current_path_len : felt, current_path : felt*, saved_paths_len : felt, saved_paths : felt*
+) -> (new_saved_paths_len):
+    let new_saved_paths_len = saved_paths_len + current_path_len
+    memcpy(saved_paths + saved_paths_len, current_path, current_path_len)
+    %{
+        print(f" saved path len : {ids.new_saved_paths_len}")
+        for i in range(ids.new_saved_paths_len):
+            print(memory[ids.saved_paths+i])
+        print(" ______DONE_____ ")
+    %}
+    return (new_saved_paths_len)
+end
+
+# func save_path_if_reached(
+#     successor_node:Node,destination_node:Node,current_path_len : felt, current_path : felt*, saved_paths_len : felt, saved_paths : felt*
+# )->(saved_paths_len:felt):
+#     if successor_node.identifier == destination_node.identifier:
+#         assert saved_paths[saved_paths_len] = current_path_len
+#         let new_saved_path_len = saved_paths_len+current_path_len
+#         memcpy(saved_paths + saved_paths_len, current_path, current_path_len - 1)
+#         return (new_saved_path_len)
+#     end
+
+# return(saved_paths_len)
+
+# end

@@ -13,6 +13,9 @@ func test_pop_stack():
     let (stack_len, my_stack, last_elem) = Stack.pop(stack_len, my_stack)
     assert last_elem = 3
     assert stack_len = 2
+    assert my_stack[0] = 1
+    tempvar should_not_revert = my_stack[1]
+    assert should_not_revert = 2
     %{ expect_revert() %}
     tempvar should_revert = my_stack[2]
     return ()
