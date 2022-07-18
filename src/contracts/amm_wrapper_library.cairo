@@ -1,0 +1,62 @@
+%lang starknet
+from starkware.cairo.common.cairo_builtins import HashBuiltin
+
+from src.interfaces.i_router import IRouter
+from src.interfaces.i_factory import IFactory
+from src.interfaces.i_pair import IJediSwapPair
+from starkware.cairo.common.uint256 import Uint256
+
+@storage_var
+func AmmWrapper_jediswap_router() -> (address : felt):
+end
+
+@storage_var
+func AmmWrapper_jediswap_factory() -> (address : felt):
+end
+
+namespace AmmWrapper:
+    func initializer{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
+        jediswap_router : felt, jediswap_factory : felt
+    ):
+        AmmWrapper_jediswap_router.write(jediswap_router)
+        AmmWrapper_jediswap_factory.write(jediswap_factory)
+        return ()
+    end
+
+    func get_pair{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
+        token0 : felt, token1 : felt
+    ) -> (pair : felt):
+        let (factory_address) = AmmWrapper_jediswap_factory.read()
+        let (pair) = IFactory.get_pair(factory_address, token0, token1)
+        return (pair)
+    end
+
+    func get_all_pairs{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}() -> (
+        all_pairs_len : felt, all_pairs : felt*
+    ):
+        let (factory_address) = AmmWrapper_jediswap_factory.read()
+        let (all_pairs_len, all_pairs) = IFactory.get_all_pairs(factory_address)
+        return (all_pairs_len, all_pairs)
+    end
+
+    func get_pair_token_0{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
+        pair : felt
+    ) -> (token0 : felt):
+        let (token0) = IJediSwapPair.token0(pair)
+        return (token0)
+    end
+
+    func get_pair_token_1{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
+        pair : felt
+    ) -> (token1 : felt):
+        let (token1) = IJediSwapPair.token1(pair)
+        return (token1)
+    end
+
+    func get_pair_reserves{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
+        pair : felt
+    ) -> (reserve_0 : Uint256, reserver_1 : Uint256):
+        let (reserve_0, reserve_1, _) = IJediSwapPair.get_reserves(pair)
+        return (reserve_0, reserve_1)
+    end
+end
