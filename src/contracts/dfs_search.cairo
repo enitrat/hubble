@@ -197,9 +197,6 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
     local current_path_updated : felt*
     local current_path_len_updated : felt
 
-    # TODO THE PROBLEM IS HERE
-    # WHEN WE GO BACK TO THE FIRST NODE, OF INDEX 0
-    # WE DON'T VISIT ROUTE 0>1 BECAUSE 1 IS GREY
     let (is_state_1_or_0) = is_le(successor_visit_state, 1)
     if is_state_1_or_0 == 1:
         # assert current_path[current_path_len] = successor_index

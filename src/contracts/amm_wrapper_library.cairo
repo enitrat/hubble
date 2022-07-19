@@ -55,7 +55,7 @@ namespace AmmWrapper:
 
     func get_pair_reserves{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
         pair : felt
-    ) -> (reserve_0 : Uint256, reserver_1 : Uint256):
+    ) -> (reserve_0 : Uint256, reserve_1 : Uint256):
         let (reserve_0, reserve_1, _) = IJediSwapPair.get_reserves(pair)
         return (reserve_0, reserve_1)
     end

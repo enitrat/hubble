@@ -1,5 +1,4 @@
 %lang starknet
-%builtins range_check
 
 from starkware.cairo.common.default_dict import default_dict_new, default_dict_finalize
 from starkware.cairo.common.dict import dict_write, dict_update, dict_read
