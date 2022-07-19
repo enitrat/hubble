@@ -15,10 +15,8 @@ const Home = () => {
     <Box mb={8} w="full" h="full" d="flex" flexDirection="column">
       <SomeText />
       <Box flex="1 1 auto">
-        <Transactions />
         <MintTokens />
       </Box>
-      <CTASection />
       <Chart id="chartdiv" />
     </Box>
   );

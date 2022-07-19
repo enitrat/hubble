@@ -12,7 +12,7 @@ const Footer = () => {
           href="https://github.com/a5f9t4"
           isExternal
         >
-          github.com/a5f9t4
+          hubble
         </Link>
       </Text>
     </Flex>

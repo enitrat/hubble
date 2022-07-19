@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const NextSitemapConfig = {
-  siteUrl: "https://cairopal.xyz",
+  siteUrl: "https://hubble.xyz",
   generateRobotsTxt: true,
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { useStarknet } from "../StarknetProvider";
 import { BlockHashContext } from "./context";
+import {logger} from "ethers";
 
 interface BlockHashProviderProps {
   children: React.ReactNode;
@@ -17,9 +18,13 @@ export function BlockHashProvider({
   );
 
   const fetchBlockHash = React.useCallback(() => {
-    library.getBlock().then((block) => {
-      setBlockHash(block.block_hash);
-    });
+    try {
+      library.getBlock().then((block) => {
+        setBlockHash(block.block_hash);
+      });
+    } catch (e) {
+      logger.warn(e);
+    }
   }, [library]);
 
   React.useEffect(() => {

@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Image, Link } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 
-const repoLink = "https://github.com/a5f9t4/cairopal";
+const repoLink = "https://github.com/msaug/hubble";
 
 const CTASection = () => {
   return (
