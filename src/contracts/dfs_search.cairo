@@ -46,7 +46,13 @@ func init_dfs{range_check_ptr}(
         saved_paths_len=0,
         saved_paths=saved_paths,
     )
-    return (saved_paths_len, saved_paths)
+
+    # stores the token addresses instead of the indexes in the path
+    let (token_paths : felt*) = alloc()
+    get_tokens_from_path(
+        graph_len, graph, saved_paths_len, saved_paths, current_index=0, token_paths=token_paths
+    )
+    return (saved_paths_len, token_paths)
 end
 
 func DFS_rec{dict_ptr : DictAccess*, range_check_ptr}(
@@ -145,7 +151,7 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
 
     # No more successors
     if successors_len == 0:
-        %{ print(f" Node{ids.current_node.index} has no successors left to explore ") %}
+        # %{ print(f" Node{ids.current_node.index} has no successors left to explore ") %}
         # dict_write{dict_ptr=dict_ptr}(key=current_node.index, new_value=2)
         let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
         # explore previous_node's next_successor
@@ -154,7 +160,7 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
 
     # Hops greater than limit
     if remaining_hops == 0:
-        %{ print(f" Too many hops. current path len ") %}
+        # %{ print(f" Too many hops. current path len ") %}
         let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
         # explore previous_node's next_successor
         return (saved_paths_len, current_path_len, current_path, successors_len - 1, remaining_hops)
@@ -165,7 +171,7 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
     let successor_index = successor.index
     let (is_already_visited) = is_in_path(current_path_len, current_path, successor_index)
     if is_already_visited == 1:
-        %{ print(f" Node {ids.successor_index} already in path, returning ") %}
+        # %{ print(f" Node {ids.successor_index} already in path, returning ") %}
         return visit_successors(
             graph_len=graph_len,
             graph=graph,
@@ -215,7 +221,7 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
         tempvar dict_ptr = dict_ptr
         tempvar range_check_ptr = range_check_ptr
     else:
-        %{ print(f"already visited {ids.successor_index}") %}
+        # %{ print(f"already visited {ids.successor_index}") %}
         saved_paths_len_updated = saved_paths_len
         current_path_len_updated = current_path_len
         current_path_updated = current_path
@@ -266,24 +272,57 @@ func save_path(
     let new_saved_paths_len = saved_paths_len + current_path_len
     memcpy(saved_paths + saved_paths_len, current_path, current_path_len)
     %{
-        print(f" saved path len : {ids.new_saved_paths_len}")
-        for i in range(ids.new_saved_paths_len):
-            print(memory[ids.saved_paths+i])
-        print(" ______DONE_____ ")
+        # print(f" saved path len : {ids.new_saved_paths_len}")
+        # for i in range(ids.new_saved_paths_len):
+            # print(memory[ids.saved_paths+i])
+        # print(" ______DONE_____ ")
     %}
     return (new_saved_paths_len)
 end
 
-# func save_path_if_reached(
-#     successor_node:Node,destination_node:Node,current_path_len : felt, current_path : felt*, saved_paths_len : felt, saved_paths : felt*
-# )->(saved_paths_len:felt):
-#     if successor_node.identifier == destination_node.identifier:
-#         assert saved_paths[saved_paths_len] = current_path_len
-#         let new_saved_path_len = saved_paths_len+current_path_len
-#         memcpy(saved_paths + saved_paths_len, current_path, current_path_len - 1)
-#         return (new_saved_path_len)
-#     end
+# @notice Return with an array composed by (path_len,path) subarrays identified by token addresses.
+func get_tokens_from_path(
+    graph_len : felt,
+    graph : Node*,
+    saved_paths_len : felt,
+    saved_paths : felt*,
+    current_index : felt,
+    token_paths : felt*,
+):
+    if current_index == saved_paths_len:
+        return ()
+    end
+    # %{ print(f"current index is {ids.current_index}") %}
+    let subarray_length = saved_paths[current_index]
+    assert [token_paths] = subarray_length
+    # %{ print(f"subarray is {ids.subarray_length}") %}
 
-# return(saved_paths_len)
+    parse_array_segment(
+        graph_len=graph_len,
+        graph=graph,
+        saved_paths=saved_paths,
+        i=current_index + 1,
+        j=current_index + 1 + subarray_length,
+        token_paths=token_paths + 1,
+    )
+    return get_tokens_from_path(
+        graph_len=graph_len,
+        graph=graph,
+        saved_paths_len=saved_paths_len,
+        saved_paths=saved_paths,
+        current_index=current_index + subarray_length + 1,
+        token_paths=token_paths + 1 + subarray_length,
+    )
+end
 
-# end
+# @notice parses the token addresses for all tokens between indexes i and j in the indexes array
+func parse_array_segment(
+    graph_len : felt, graph : Node*, saved_paths : felt*, i : felt, j : felt, token_paths : felt*
+):
+    if i == j:
+        return ()
+    end
+    let index_in_graph = saved_paths[i]
+    assert [token_paths] = graph[index_in_graph].identifier
+    return parse_array_segment(graph_len, graph, saved_paths, i + 1, j, token_paths + 1)
+end
