@@ -13,7 +13,6 @@ const Home = () => {
 
   return (
     <Box mb={8} w="full" h="full" d="flex" flexDirection="column">
-      <SomeText />
       <Box flex="1 1 auto">
         <MintTokens />
       </Box>

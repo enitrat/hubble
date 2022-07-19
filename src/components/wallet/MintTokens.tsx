@@ -7,17 +7,18 @@ import {
   useBreakpointValue,
   useColorMode,
 } from "@chakra-ui/react";
-import {stark} from "starknet";
+import {Abi, Contract, stark} from "starknet";
+import ABI from "../../abis/abi.json";
 
 import {useStarknet} from "context";
 import {ArrowRightIcon, ChevronDownIcon} from "@chakra-ui/icons";
 import {useState} from "react";
 import tokens, {pairs} from "../../../constants/pairs";
+import {compiledErc20} from "starknet/__tests__/fixtures";
 
 
 const MintTokens = () => {
-  const CONTRACT_ADDRESS =
-    "0x06a09ccb1caaecf3d9683efe335a667b2169a409d19c589ba1eb771cd210af75";
+  const CONTRACT_ADDRESS = "0x06ded6724e61c4d92b8271f294c79cec7a207bb602be319df7e4211d4748b5a4";
 
   const {connected, library} = useStarknet();
   const {colorMode} = useColorMode();
@@ -27,24 +28,33 @@ const MintTokens = () => {
   });
   const [tokenFrom, setTokenFrom] = useState(pairs[0].token0);
   const [tokenTo, setTokenTo] = useState(pairs[0].token1);
+  const [pathLoading, setPathLoading] = useState(false);
+  const [bestPath, setBestPath] = useState([]);
 
   // const { getSelectorFromName } = stark;
   // const selector = getSelectorFromName("mint");
 
-  const mintTokens = async () => {
-    const mintTokenResponse = await library.addTransaction({
-      type: "INVOKE_FUNCTION",
-      contract_address: CONTRACT_ADDRESS,
-      // entry_point_selector: selector,
-      calldata: [
-        "25337092028752943692105536859798085962999747221745650943814125673320853150",
-        "10000000000000000000",
-        "0",
-      ],
-    });
-    // eslint-disable-next-line no-console
-    console.log(mintTokenResponse);
+  const getPairs = async () => {
+    const hubble = new Contract(ABI as Abi, CONTRACT_ADDRESS);
+
+    const pairs = await hubble.get_all_routes();
+
+    console.log(`received pairs : ${pairs}`);
   };
+
+  const getBestPath = async () => {
+    const hubble = new Contract(ABI as Abi, CONTRACT_ADDRESS);
+    const pairs = await hubble.get_best_route();
+    const bestTokensRoute = parseBestRoutes(pairs);
+  }
+
+  const parseBestRoutes = (hubbleResponse: any) => {
+    let tokensRoute = [];
+    for (let i = 1; i < hubbleResponse.length; i++) {
+      tokensRoute.push(tokens.find((token) => hubbleResponse[i] === token.address));
+    }
+    return tokensRoute;
+  }
 
   const getTokensTo = () => {
     return pairs
