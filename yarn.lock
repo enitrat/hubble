@@ -2772,6 +2772,11 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.182.tgz#05301a4d5e62963227eaafe0ce04dd77c54ea5c2"
   integrity sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==
 
+"@types/minimalistic-assert@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#b10f03bf534b806a1e38970075a08d29f14624d0"
+  integrity sha512-LjFxDeQtgj+MYOOFuV+BILc/w9ryfxd2eNLF0oJdOBud+xCj80ZAEkAwt6y0qx81QMZ632yAaWdvIMjEK2HcmA==
+
 "@types/minimatch@*":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
