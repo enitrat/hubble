@@ -53,7 +53,8 @@ namespace AmmWrapper:
     ):
         let (factory_address) = AmmWrapper_jediswap_factory.read()
         let (all_pairs_len, all_pairs) = IFactory.get_all_pairs(factory_address)
-        return (all_pairs_len, all_pairs)
+        # return (all_pairs_len, all_pairs)
+        return (3, all_pairs)
     end
 
     func get_pair_token0{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
@@ -87,12 +88,4 @@ namespace AmmWrapper:
         )
         return (amounts_len, amounts)
     end
-end
-
-func _get_parsed_pairs{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
-    pairs_addresses_len : felt,
-    pairs_addresses : felt*,
-    parsed_pairs : Pair*,
-    parsed_pairs_len : felt,
-) -> (parsed_pairs_len : felt):
 end

@@ -24,7 +24,9 @@ namespace Hubble:
     ) -> (routes_len : felt, routes : felt*):
         alloc_locals
         let (amm_wrapper_address) = Hubble_amm_wrapper_address.read()
-        let (all_pairs_len, all_pairs : felt*) = IAmmWrapper.get_all_pairs(amm_wrapper_address)
+        with_attr error_message("hubble : get all pairs fail"):
+            let (all_pairs_len, all_pairs : felt*) = IAmmWrapper.get_all_pairs(amm_wrapper_address)
+        end
         let (local parsed_pairs : Pair*) = alloc()
         with_attr error_message("hubble : parse_all_pairs fail"):
             let (parsed_pairs_len) = parse_all_pairs(all_pairs_len, all_pairs, parsed_pairs, 0)
@@ -190,10 +192,11 @@ func get_node_from_token(graph_len : felt, graph : Node*, token : felt) -> (node
     if graph_len == 0:
         # it should fail
         assert 1 = 0
+        # return ([graph])
     end
     if [graph].identifier == token:
         return ([graph])
     end
 
-    return get_node_from_token(graph_len, graph + 1, token)
+    return get_node_from_token(graph_len - 1, graph + 1, token)
 end

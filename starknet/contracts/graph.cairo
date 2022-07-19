@@ -2,7 +2,7 @@ from starkware.cairo.common.memcpy import memcpy
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.lang.compiler.lib.registers import get_fp_and_pc
 
-from starknet.data_types.data_types import Node, Pair
+from src.data_types.data_types import Node, Pair
 # Adjancency list graph implementation
 # Meant to build a graph from AMM pairs
 
@@ -18,7 +18,7 @@ func build_graph(pairs_len : felt, pairs : Pair*) -> (
     # the node at graph[i] has neighbors[i] neighbors
     # that allows us to dynamically add neighbors to nodes, without
     # needing to copy the struct entirely to update len
-    let (graph_len, neighbors) = _build_graph(pairs_len, pairs, 0, graph, neighbors)
+    let (graph_len,neighbors) = _build_graph(pairs_len, pairs, 0, graph, neighbors)
 
     return (graph_len, graph, neighbors)
 end
@@ -32,11 +32,11 @@ end
 # @param neighbors : The array of neighbors
 func _build_graph(
     pairs_len : felt, pairs : Pair*, graph_len : felt, graph : Node*, neighbors : felt*
-) -> (graph_len : felt, neighbors : felt*):
+) -> (graph_len : felt,neighbors:felt*):
     alloc_locals
 
     if pairs_len == 0:
-        return (graph_len, neighbors)
+        return (graph_len,neighbors)
     end
 
     let token_0 = [pairs].token_0
