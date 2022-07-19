@@ -1,50 +1,11 @@
-# cairopal • [![Tests](https://github.com/a5f9t4/cairopal/actions/workflows/tests.yml/badge.svg)](https://github.com/a5f9t4/cairopal/actions/workflows/tests.yml) [![Lints](https://github.com/a5f9t4/cairopal/actions/workflows/lints.yml/badge.svg)](https://github.com/a5f9t4/cairopal/actions/workflows/lints.yml) ![GitHub](https://img.shields.io/github/license/a5f9t4/cairopal) ![GitHub package.json version](https://img.shields.io/github/package-json/v/a5f9t4/cairopal) ![Vercel Deployment](https://img.shields.io/github/deployments/a5f9t4/cairopal/production?label=vercel)
+# Hubble
 
+Hubble is an onchain solver aggregating different DEXs in order to provide the best swap route. It builds a graph with edges representing tokens and vertices representing the existent pairs. When all possible routes are indentified, the propagates getAmountOut() calls through all routes in order to find the maximum output one. In new versions swap split will be implemented to be able to split the order. Next, other DEXs will be added (only JediSwap is supported currently).
 
-**Modern**, **Flexible** Starknet Dapp Template.
-
-
-## Developing
-
-Clone the repository
-
-```bash
-git clone git@github.com:a5f9t4/cairopal.git
-cd cairopal
+### Installation
 ```
-
-Install Dependencies
-
-```bash
-yarn
+yarn && yarn dev
 ```
-
-Run locally
-
-```bash
-yarn dev
+### Testing
 ```
-
-#### Run tests
-
-```bash
-yarn test
-```
-
-## Acknowledgements
-
-- [StarkWare](https://starkware.co/)
-- [Starknet.js](https://github.com/seanjameshan/starknet.js)
-- [Argent-x](https://github.com/argentlabs/argent-x)
-- [Fracek's React, Starknet Boilerplate](https://github.com/fracek/starknet-react-example)
-- [OpenZeppelin](https://github.com/OpenZeppelin/cairo-contracts)
-
-## Security
-
-This project is still in a very early and experimental phase. It has never been audited nor thoroughly reviewed for security vulnerabilities. Not recommended for production use.
-
-Please report any security issues you find by opening up an issue in this reposisitory.
-
-## License
-
-Cairopal Contracts are released under the [AGPL-3.0-only](LICENSE).
+protostar test
