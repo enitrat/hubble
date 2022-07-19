@@ -9,3 +9,4 @@ yarn && yarn dev
 ### Testing
 ```
 protostar test
+```
