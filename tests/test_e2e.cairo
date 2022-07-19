@@ -1,11 +1,13 @@
 %lang starknet
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.starknet.common.syscalls import get_contract_address
+from starkware.cairo.common.uint256 import Uint256, uint256_lt
 from src.contracts.amm_wrapper_library import AmmWrapper
 from src.data_types.data_types import Pair, Node
 from starkware.cairo.common.alloc import alloc
 from src.contracts.graph import build_graph
 from src.contracts.dfs_search import init_dfs
+from src.contracts.hubble_library import Hubble, parse_all_pairs
 
 const JEDI_ROUTER = 19876081725
 const JEDI_FACTORY = 1786125
@@ -62,7 +64,7 @@ func test_e2e{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}
 
     # see details in test_dfs.cairo
     let (local parsed_pairs : Pair*) = alloc()
-    let (parsed_pairs_len) = get_all_pairs(all_pairs_len, all_pairs, parsed_pairs, 0)
+    let (parsed_pairs_len) = parse_all_pairs(all_pairs_len, all_pairs, parsed_pairs, 0)
     assert parsed_pairs_len = 5
     assert parsed_pairs[0] = Pair(TOKEN_A, TOKEN_B)
     assert parsed_pairs[1] = Pair(TOKEN_A, TOKEN_C)
@@ -94,23 +96,44 @@ func test_e2e{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}
     assert saved_paths[10] = TOKEN_B
     assert saved_paths[11] = TOKEN_C
 
+    # let amount_in = Uint256(1000,0)
+
+    # %{
+    #     stop_mock_ab_out = mock_call(ids.PAIR_A_B,"token0", [ids.TOKEN_A])
+    #     stop_mock_ac_out = mock_call(ids.PAIR_A_B,"token0", [ids.TOKEN_A])
+    #     stop_mock_bc_out = mock_call(ids.PAIR_A_B,"token0", [ids.TOKEN_A])
+    #     stop_mock_dc_out = mock_call(ids.PAIR_A_B,"token0", [ids.TOKEN_A])
+    #     stop_mock_db_out= mock_call(ids.PAIR_A_B,"token0", [ids.TOKEN_A])
+    # %}
+
     # now that we have the paths -> we need to run IJediswapRouter.get_amounts_out with each path :)
     return ()
 end
 
-func get_all_pairs{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
-    pairs_addresses_len : felt,
-    pairs_addresses : felt*,
-    parsed_pairs : Pair*,
-    parsed_pairs_len : felt,
-) -> (parsed_pairs_len : felt):
-    if pairs_addresses_len == 0:
-        return (parsed_pairs_len)
-    end
-    let (token_0) = AmmWrapper.get_pair_token_0([pairs_addresses])
-    let (token_1) = AmmWrapper.get_pair_token_1([pairs_addresses])
-    assert [parsed_pairs] = Pair(token_0, token_1)
-    return get_all_pairs(
-        pairs_addresses_len - 1, pairs_addresses + 1, parsed_pairs + Pair.SIZE, parsed_pairs_len + 1
-    )
+func test_get_best_route{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}():
+    alloc_locals
+    before_each()
+    %{ stop_mock = mock_call(ids.JEDI_FACTORY,"get_all_pairs", [5,ids.PAIR_A_B, ids.PAIR_A_C,ids.PAIR_B_C,ids.PAIR_D_C,ids.PAIR_D_B]) %}
+    let (all_pairs_len, all_pairs) = AmmWrapper.get_all_pairs()
+    %{ stop_mock() %}
+    assert all_pairs_len = 5
+    assert all_pairs[0] = PAIR_A_B
+    assert all_pairs[1] = PAIR_A_C
+    assert all_pairs[2] = PAIR_B_C
+    assert all_pairs[3] = PAIR_D_C
+    assert all_pairs[4] = PAIR_D_B
+
+    %{
+        stop_mock_ab_0 = mock_call(ids.PAIR_A_B,"token0", [ids.TOKEN_A])
+        stop_mock_ab_1 = mock_call(ids.PAIR_A_B,"token1", [ids.TOKEN_B])
+        stop_mock_ac_0 = mock_call(ids.PAIR_A_C,"token0", [ids.TOKEN_A])
+        stop_mock_ac_1 = mock_call(ids.PAIR_A_C,"token1", [ids.TOKEN_C])
+        stop_mock_bc_0 = mock_call(ids.PAIR_B_C,"token0", [ids.TOKEN_B])
+        stop_mock_bc_1 = mock_call(ids.PAIR_B_C,"token1", [ids.TOKEN_C])
+        stop_mock_dc_0 = mock_call(ids.PAIR_D_C,"token0", [ids.TOKEN_D])
+        stop_mock_dc_1 = mock_call(ids.PAIR_D_C,"token1", [ids.TOKEN_C])
+        stop_mock_db_0 = mock_call(ids.PAIR_D_B,"token0", [ids.TOKEN_D])
+        stop_mock_db_1 = mock_call(ids.PAIR_D_B,"token1", [ids.TOKEN_B])
+    %}
+    return ()
 end

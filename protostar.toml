@@ -5,12 +5,16 @@ protostar_version = "0.2.6"
 libs_path = "lib"
 
 ["protostar.contracts"]
-main = [
-    "src/main.cairo",
+hubble = [
+    "src/contracts/hubble.cairo",
+]
+
+amm_wrapper = [
+    "src/contracts/amm_wrapper.cairo",
 ]
 
 ["protostar.shared_command_configs"]
-cairo_path = ["./lib/caÏiro_contracts/src"]
+cairo_path = ["./lib/cairo_contracts/src"]
 
 [profile.devnet.protostar.deploy]
 gateway-url = "http://127.0.0.1:5050/"

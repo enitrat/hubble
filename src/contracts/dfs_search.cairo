@@ -268,12 +268,12 @@ func save_path(
 ) -> (new_saved_paths_len):
     let new_saved_paths_len = saved_paths_len + current_path_len
     memcpy(saved_paths + saved_paths_len, current_path, current_path_len)
-    %{
-        # print(f" saved path len : {ids.new_saved_paths_len}")
-        # for i in range(ids.new_saved_paths_len):
-            # print(memory[ids.saved_paths+i])
-        # print(" ______DONE_____ ")
-    %}
+    # %{
+    #     print(f" saved path len : {ids.new_saved_paths_len}")
+    #     for i in range(ids.new_saved_paths_len):
+    #         print(memory[ids.saved_paths+i])
+    #     print(" ______DONE_____ ")
+    # %}
     return (new_saved_paths_len)
 end
 

@@ -58,7 +58,7 @@ end
 func test_get_token_0{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}():
     before_each()
     %{ stop_mock = mock_call(ids.PAIR_A_B,"token0", [ids.TOKEN_A]) %}
-    let (token0) = AmmWrapper.get_pair_token_0(PAIR_A_B)
+    let (token0) = AmmWrapper.get_pair_token0(PAIR_A_B)
     %{ stop_mock() %}
     assert token0 = TOKEN_A
     return ()
@@ -68,7 +68,7 @@ end
 func test_get_token_1{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}():
     before_each()
     %{ stop_mock = mock_call(ids.PAIR_A_B,"token1", [ids.TOKEN_B]) %}
-    let (token1) = AmmWrapper.get_pair_token_1(PAIR_A_B)
+    let (token1) = AmmWrapper.get_pair_token1(PAIR_A_B)
     %{ stop_mock() %}
     assert token1 = TOKEN_B
     return ()

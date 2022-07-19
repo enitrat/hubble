@@ -1,6 +1,5 @@
 %lang starknet
 from src.contracts.graph import build_graph
-
 from src.contracts.dfs_search import init_dfs
 
 from src.data_types.data_types import Pair, Node
