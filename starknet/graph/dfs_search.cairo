@@ -87,8 +87,6 @@ func DFS_rec{dict_ptr : DictAccess*, range_check_ptr}(
         let (saved_paths_len) = save_path(
             current_path_len, current_path, saved_paths_len + 1, saved_paths
         )
-        # let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
-        # return (saved_paths_len, current_path_len, current_path)
         tempvar current_path_len = current_path_len
         tempvar current_path = current_path
         tempvar saved_paths_len = saved_paths_len
@@ -151,7 +149,6 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
 
     # No more successors
     if successors_len == 0:
-        # %{ print(f" Node{ids.current_node.index} has no successors left to explore ") %}
         # dict_write{dict_ptr=dict_ptr}(key=current_node.index, new_value=2)
         let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
         # explore previous_node's next_successor
@@ -160,7 +157,6 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
 
     # Hops greater than limit
     if remaining_hops == 0:
-        # %{ print(f" Too many hops. current path len ") %}
         let (current_path_len, current_path, _) = Stack.pop(current_path_len, current_path)
         # explore previous_node's next_successor
         return (saved_paths_len, current_path_len, current_path, successors_len - 1, remaining_hops)
@@ -171,7 +167,6 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
     let successor_index = successor.index
     let (is_already_visited) = is_in_path(current_path_len, current_path, successor_index)
     if is_already_visited == 1:
-        # %{ print(f" Node {ids.successor_index} already in path, returning ") %}
         return visit_successors(
             graph_len=graph_len,
             graph=graph,
@@ -218,7 +213,6 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
         tempvar dict_ptr = dict_ptr
         tempvar range_check_ptr = range_check_ptr
     else:
-        # %{ print(f"already visited {ids.successor_index}") %}
         saved_paths_len_updated = saved_paths_len
         current_path_len_updated = current_path_len
         current_path_updated = current_path
@@ -244,7 +238,6 @@ func visit_successors{dict_ptr : DictAccess*, range_check_ptr}(
         saved_paths=saved_paths,
     )
 
-    # return (saved_paths_len, current_path_len, current_path, successors_len, remaining_hops)
 end
 
 # @notice returns the index of the node in the graph
@@ -268,12 +261,6 @@ func save_path(
 ) -> (new_saved_paths_len):
     let new_saved_paths_len = saved_paths_len + current_path_len
     memcpy(saved_paths + saved_paths_len, current_path, current_path_len)
-    # %{
-    #     print(f" saved path len : {ids.new_saved_paths_len}")
-    #     for i in range(ids.new_saved_paths_len):
-    #         print(memory[ids.saved_paths+i])
-    #     print(" ______DONE_____ ")
-    # %}
     return (new_saved_paths_len)
 end
 
@@ -289,10 +276,8 @@ func get_tokens_from_path(
     if current_index == saved_paths_len:
         return ()
     end
-    # %{ print(f"current index is {ids.current_index}") %}
     let subarray_length = saved_paths[current_index]
     assert [token_paths] = subarray_length
-    # %{ print(f"subarray is {ids.subarray_length}") %}
 
     parse_array_segment(
         graph_len=graph_len,

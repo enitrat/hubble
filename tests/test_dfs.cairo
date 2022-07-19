@@ -1,6 +1,6 @@
 %lang starknet
-from starknet.contracts.graph import build_graph
-from starknet.contracts.dfs_search import init_dfs
+from starknet.graph.graph import build_graph
+from starknet.graph.dfs_search import init_dfs
 
 from starknet.data_types.data_types import Pair, Node
 from starkware.cairo.common.alloc import alloc

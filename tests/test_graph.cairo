@@ -1,5 +1,5 @@
 %lang starknet
-from starknet.contracts.graph import (
+from starknet.graph.graph import (
     Pair,
     Node,
     add_neighbor,

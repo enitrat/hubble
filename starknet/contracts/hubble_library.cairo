@@ -3,8 +3,8 @@
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.uint256 import Uint256, uint256_lt
-from starknet.contracts.graph import build_graph
-from starknet.contracts.dfs_search import init_dfs
+from starknet.graph.graph import build_graph
+from starknet.graph.dfs_search import init_dfs
 from starknet.data_types.data_types import Pair, Node
 from starknet.interfaces.i_amm_wrapper import IAmmWrapper
 @storage_var
