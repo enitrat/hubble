@@ -1,0 +1,8 @@
+{
+  "index.tsx -> ../components/charts/Chart": {
+    "id": "./src/components/charts/Chart.tsx",
+    "files": [
+      "static/chunks/src_components_charts_Chart_tsx.js"
+    ]
+  }
+}
