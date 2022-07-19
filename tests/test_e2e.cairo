@@ -5,8 +5,8 @@ from starkware.cairo.common.uint256 import Uint256, uint256_lt
 from starknet.contracts.amm_wrapper_library import AmmWrapper
 from starknet.data_types.data_types import Pair, Node
 from starkware.cairo.common.alloc import alloc
-from starknet.contracts.graph import build_graph
-from starknet.contracts.dfs_search import init_dfs
+from starknet.graph.graph import build_graph
+from starknet.graph.dfs_search import init_dfs
 from starknet.contracts.hubble_library import Hubble, parse_all_pairs
 
 const JEDI_ROUTER = 19876081725

@@ -2,7 +2,7 @@ from starkware.cairo.common.memcpy import memcpy
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.lang.compiler.lib.registers import get_fp_and_pc
 
-from src.data_types.data_types import Node, Pair
+from starknet.data_types.data_types import Node, Pair
 # Adjancency list graph implementation
 # Meant to build a graph from AMM pairs
 
