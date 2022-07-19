@@ -3,10 +3,10 @@
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.uint256 import Uint256, uint256_lt
-from src.contracts.graph import build_graph
-from src.contracts.dfs_search import init_dfs
-from src.data_types.data_types import Pair, Node
-from src.interfaces.i_amm_wrapper import IAmmWrapper
+from starknet.contracts.graph import build_graph
+from starknet.contracts.dfs_search import init_dfs
+from starknet.data_types.data_types import Pair, Node
+from starknet.interfaces.i_amm_wrapper import IAmmWrapper
 @storage_var
 func Hubble_amm_wrapper_address() -> (address : felt):
 end

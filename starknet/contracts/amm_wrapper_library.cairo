@@ -1,11 +1,11 @@
 %lang starknet
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 
-from src.interfaces.i_router import IRouter
-from src.interfaces.i_factory import IFactory
-from src.interfaces.i_pair import IJediSwapPair
+from starknet.interfaces.i_router import IRouter
+from starknet.interfaces.i_factory import IFactory
+from starknet.interfaces.i_pair import IJediSwapPair
 from starkware.cairo.common.uint256 import Uint256
-from src.data_types.data_types import Pair, Node
+from starknet.data_types.data_types import Pair, Node
 from starkware.cairo.common.alloc import alloc
 
 @storage_var
@@ -34,17 +34,17 @@ namespace AmmWrapper:
     end
 
     func get_parsed_pairs{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}():
-        let (parsed_pairs:Pair*) = alloc()
+        let (parsed_pairs : Pair*) = alloc()
 
-        return()
+        return ()
     end
 
     func get_pair_tokens{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
-        pair_address:felt 
+        pair_address : felt
     ) -> (pair : felt):
         let (token0) = get_pair_token0(pair_address)
         let (token1) = get_pair_token1(pair_address)
-        tempvar pair:Pair = Pair(token0, token1)
+        tempvar pair : Pair = Pair(token0, token1)
         return (pair)
     end
 
@@ -89,12 +89,10 @@ namespace AmmWrapper:
     end
 end
 
-
 func _get_parsed_pairs{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
     pairs_addresses_len : felt,
     pairs_addresses : felt*,
     parsed_pairs : Pair*,
     parsed_pairs_len : felt,
 ) -> (parsed_pairs_len : felt):
-   
 end

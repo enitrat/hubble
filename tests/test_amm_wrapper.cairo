@@ -2,7 +2,7 @@
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.starknet.common.syscalls import get_contract_address
-from src.contracts.amm_wrapper_library import AmmWrapper
+from starknet.contracts.amm_wrapper_library import AmmWrapper
 from starkware.cairo.common.uint256 import Uint256
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.registers import get_fp_and_pc

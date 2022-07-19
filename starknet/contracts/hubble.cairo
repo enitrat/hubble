@@ -3,10 +3,10 @@
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.uint256 import Uint256
-from src.contracts.graph import build_graph
-from src.contracts.dfs_search import init_dfs
-from src.data_types.data_types import Pair, Node
-from src.contracts.hubble_library import Hubble
+from starknet.contracts.graph import build_graph
+from starknet.contracts.dfs_search import init_dfs
+from starknet.data_types.data_types import Pair, Node
+from starknet.contracts.hubble_library import Hubble
 
 const JEDI_ROUTER = 19876081725
 const JEDI_FACTORY = 1786125
@@ -62,7 +62,7 @@ end
 @view
 func get_best_route{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
     amount_in : Uint256, token_from : felt, token_to : felt, max_hops : felt
-) -> (route_len : felt, route : Uint256*,amount_out:Uint256):
+) -> (route_len : felt, route : Uint256*, amount_out : Uint256):
     return Hubble.get_best_route(amount_in, token_from, token_to, max_hops)
 end
 
@@ -85,7 +85,7 @@ end
 #     let (best_route : Uint256*) = alloc()
 #     let best_route_len = 0
 
-#     # all routes[0] is the length of the first route, which starts at index = 1
+# # all routes[0] is the length of the first route, which starts at index = 1
 #     let (best_route_len, best_route, amount_out) = Hubble._get_best_route(
 #         amount_in, saved_paths_len, saved_paths, 0, best_route
 #     )

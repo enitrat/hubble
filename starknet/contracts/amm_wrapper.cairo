@@ -1,7 +1,7 @@
 %lang starknet
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
-from src.contracts.amm_wrapper_library import AmmWrapper
+from starknet.contracts.amm_wrapper_library import AmmWrapper
 from starkware.cairo.common.uint256 import Uint256
 
 @constructor

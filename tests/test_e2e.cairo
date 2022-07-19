@@ -2,12 +2,12 @@
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.starknet.common.syscalls import get_contract_address
 from starkware.cairo.common.uint256 import Uint256, uint256_lt
-from src.contracts.amm_wrapper_library import AmmWrapper
-from src.data_types.data_types import Pair, Node
+from starknet.contracts.amm_wrapper_library import AmmWrapper
+from starknet.data_types.data_types import Pair, Node
 from starkware.cairo.common.alloc import alloc
-from src.contracts.graph import build_graph
-from src.contracts.dfs_search import init_dfs
-from src.contracts.hubble_library import Hubble, parse_all_pairs
+from starknet.contracts.graph import build_graph
+from starknet.contracts.dfs_search import init_dfs
+from starknet.contracts.hubble_library import Hubble, parse_all_pairs
 
 const JEDI_ROUTER = 19876081725
 const JEDI_FACTORY = 1786125

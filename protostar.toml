@@ -6,11 +6,11 @@ libs_path = "lib"
 
 ["protostar.contracts"]
 hubble = [
-    "src/contracts/hubble.cairo",
+    "starknet/contracts/hubble.cairo",
 ]
 
 amm_wrapper = [
-    "src/contracts/amm_wrapper.cairo",
+    "starknet/contracts/amm_wrapper.cairo",
 ]
 
 ["protostar.shared_command_configs"]

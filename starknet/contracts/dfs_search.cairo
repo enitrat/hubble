@@ -1,10 +1,10 @@
-from src.data_types.data_types import Node
+from starknet.data_types.data_types import Node
 from starkware.cairo.common.default_dict import default_dict_new, default_dict_finalize
 from starkware.cairo.common.dict_access import DictAccess
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.math_cmp import is_le
 
-from src.utils.array_utils import Stack
+from starknet.utils.array_utils import Stack
 
 from starkware.cairo.common.memcpy import memcpy
 from starkware.cairo.common.dict import dict_write, dict_update, dict_read

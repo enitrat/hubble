@@ -1147,7 +1147,7 @@
         },
         "identifiers": {
             "__main__.AmmWrapper": {
-                "destination": "src.contracts.amm_wrapper_library.AmmWrapper",
+                "destination": "starknet.contracts.amm_wrapper_library.AmmWrapper",
                 "type": "alias"
             },
             "__main__.HashBuiltin": {
@@ -4648,42 +4648,42 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper": {
                 "type": "namespace"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs": {
                 "decorators": [],
                 "pc": 292,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -4701,17 +4701,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.Return": {
                 "cairo_type": "(all_pairs_len : felt, all_pairs : felt*)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.all_pairs": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.all_pairs": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.all_pairs",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.all_pairs",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4724,9 +4724,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.all_pairs_len": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.all_pairs_len": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.all_pairs_len",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.all_pairs_len",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4739,9 +4739,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.factory_address": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.factory_address": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.factory_address",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.factory_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4754,9 +4754,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4777,9 +4777,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4808,9 +4808,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_all_pairs.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4839,13 +4839,13 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out": {
                 "decorators": [],
                 "pc": 341,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.Args",
                 "members": {
                     "amount_in": {
                         "cairo_type": "starkware.cairo.common.uint256.Uint256",
@@ -4863,8 +4863,8 @@
                 "size": 4,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -4882,17 +4882,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.Return": {
                 "cairo_type": "(amounts_len : felt, amounts : starkware.cairo.common.uint256.Uint256*)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 1
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amount_in": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amount_in": {
                 "cairo_type": "starkware.cairo.common.uint256.Uint256",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amount_in",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amount_in",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4905,9 +4905,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amounts": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amounts": {
                 "cairo_type": "starkware.cairo.common.uint256.Uint256*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amounts",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amounts",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4920,9 +4920,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amounts_len": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amounts_len": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amounts_len",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.amounts_len",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4935,9 +4935,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.path": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.path": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.path",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.path",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4950,9 +4950,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.path_len": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.path_len": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.path_len",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.path_len",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -4965,9 +4965,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5004,9 +5004,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5051,9 +5051,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.router_address": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.router_address": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.router_address",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.router_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5066,9 +5066,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_amounts_out.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5113,13 +5113,13 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair": {
                 "decorators": [],
                 "pc": 275,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.Args",
                 "members": {
                     "token0": {
                         "cairo_type": "felt",
@@ -5133,8 +5133,8 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -5152,17 +5152,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.Return": {
                 "cairo_type": "(pair : felt)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.factory_address": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.factory_address": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.factory_address",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.factory_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5175,9 +5175,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.pair": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.pair": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.pair",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.pair",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5190,9 +5190,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5213,9 +5213,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5244,9 +5244,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5275,9 +5275,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.token0": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.token0": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.token0",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.token0",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5290,9 +5290,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.token1": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.token1": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair.token1",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair.token1",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5305,13 +5305,13 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves": {
                 "decorators": [],
                 "pc": 328,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.Args",
                 "members": {
                     "pair": {
                         "cairo_type": "felt",
@@ -5321,8 +5321,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -5340,17 +5340,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.Return": {
                 "cairo_type": "(reserve_0 : starkware.cairo.common.uint256.Uint256, reserve_1 : starkware.cairo.common.uint256.Uint256)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.pair": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.pair": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.pair",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.pair",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5363,9 +5363,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5378,9 +5378,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5401,9 +5401,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.reserve_0": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.reserve_0": {
                 "cairo_type": "starkware.cairo.common.uint256.Uint256",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.reserve_0",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.reserve_0",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5416,9 +5416,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.reserve_1": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.reserve_1": {
                 "cairo_type": "starkware.cairo.common.uint256.Uint256",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.reserve_1",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.reserve_1",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5431,9 +5431,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_reserves.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5454,13 +5454,13 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0": {
                 "decorators": [],
                 "pc": 308,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.Args",
                 "members": {
                     "pair": {
                         "cairo_type": "felt",
@@ -5470,8 +5470,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -5489,17 +5489,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.Return": {
                 "cairo_type": "(token0 : felt)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.pair": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.pair": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.pair",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.pair",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5512,9 +5512,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5527,9 +5527,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5550,9 +5550,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5573,9 +5573,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.token0": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.token0": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.token0",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token0.token0",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5588,13 +5588,13 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1": {
                 "decorators": [],
                 "pc": 318,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.Args",
                 "members": {
                     "pair": {
                         "cairo_type": "felt",
@@ -5604,8 +5604,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -5623,17 +5623,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.Return": {
                 "cairo_type": "(token1 : felt)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.pair": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.pair": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.pair",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.pair",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5646,9 +5646,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5661,9 +5661,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5684,9 +5684,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5707,9 +5707,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.token1": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.token1": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.token1",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.get_pair_token1.token1",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5722,13 +5722,13 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer": {
                 "decorators": [],
                 "pc": 265,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.initializer.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.Args",
                 "members": {
                     "jediswap_factory": {
                         "cairo_type": "felt",
@@ -5742,8 +5742,8 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.initializer.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -5761,17 +5761,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.jediswap_factory": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.jediswap_factory": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.initializer.jediswap_factory",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.jediswap_factory",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5784,9 +5784,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.jediswap_router": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.jediswap_router": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.initializer.jediswap_router",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.jediswap_router",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5799,9 +5799,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.initializer.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5830,9 +5830,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.initializer.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5861,9 +5861,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper.initializer.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper.initializer.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper.initializer.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5892,46 +5892,46 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory": {
                 "type": "namespace"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.HashBuiltin": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.HashBuiltin": {
                 "destination": "starkware.cairo.common.cairo_builtins.HashBuiltin",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr": {
                 "decorators": [],
                 "pc": 235,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -5945,17 +5945,17 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.Return": {
                 "cairo_type": "(res : felt)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5968,9 +5968,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5983,9 +5983,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.res": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.res": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.res",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.addr.res",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -5998,27 +5998,27 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.hash2": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.hash2": {
                 "destination": "starkware.cairo.common.hash.hash2",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.normalize_address": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.normalize_address": {
                 "destination": "starkware.starknet.common.storage.normalize_address",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read": {
                 "decorators": [],
                 "pc": 240,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -6036,17 +6036,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.Return": {
                 "cairo_type": "(address : felt)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.__storage_var_temp0": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.__storage_var_temp0": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.__storage_var_temp0",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.__storage_var_temp0",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6067,9 +6067,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6098,9 +6098,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6129,9 +6129,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.storage_addr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.storage_addr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.storage_addr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.storage_addr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6144,9 +6144,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.read.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6175,21 +6175,21 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.storage_read": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.storage_read": {
                 "destination": "starkware.starknet.common.syscalls.storage_read",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.storage_write": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.storage_write": {
                 "destination": "starkware.starknet.common.syscalls.storage_write",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write": {
                 "decorators": [],
                 "pc": 253,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.Args",
                 "members": {
                     "value": {
                         "cairo_type": "felt",
@@ -6199,8 +6199,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -6218,17 +6218,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6249,9 +6249,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6272,9 +6272,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.storage_addr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.storage_addr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.storage_addr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.storage_addr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6287,9 +6287,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6310,9 +6310,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.value": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.value": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.value",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_factory.write.value",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6325,46 +6325,46 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router": {
                 "type": "namespace"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.HashBuiltin": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.HashBuiltin": {
                 "destination": "starkware.cairo.common.cairo_builtins.HashBuiltin",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr": {
                 "decorators": [],
                 "pc": 205,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -6378,17 +6378,17 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.Return": {
                 "cairo_type": "(res : felt)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6401,9 +6401,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6416,9 +6416,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.res": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.res": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.res",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.addr.res",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6431,27 +6431,27 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.hash2": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.hash2": {
                 "destination": "starkware.cairo.common.hash.hash2",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.normalize_address": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.normalize_address": {
                 "destination": "starkware.starknet.common.storage.normalize_address",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read": {
                 "decorators": [],
                 "pc": 210,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -6469,17 +6469,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.Return": {
                 "cairo_type": "(address : felt)",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.__storage_var_temp0": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.__storage_var_temp0": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.__storage_var_temp0",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.__storage_var_temp0",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6500,9 +6500,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6531,9 +6531,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6562,9 +6562,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.storage_addr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.storage_addr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.storage_addr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.storage_addr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6577,9 +6577,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.read.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6608,21 +6608,21 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.storage_read": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.storage_read": {
                 "destination": "starkware.starknet.common.syscalls.storage_read",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.storage_write": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.storage_write": {
                 "destination": "starkware.starknet.common.syscalls.storage_write",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write": {
                 "decorators": [],
                 "pc": 223,
                 "type": "function"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.Args": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.Args",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.Args": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.Args",
                 "members": {
                     "value": {
                         "cairo_type": "felt",
@@ -6632,8 +6632,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.ImplicitArgs": {
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.ImplicitArgs",
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.ImplicitArgs": {
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.ImplicitArgs",
                 "members": {
                     "pedersen_ptr": {
                         "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
@@ -6651,17 +6651,17 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.Return": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.SIZEOF_LOCALS": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.pedersen_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.pedersen_ptr": {
                 "cairo_type": "starkware.cairo.common.cairo_builtins.HashBuiltin*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.pedersen_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.pedersen_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6682,9 +6682,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.range_check_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.range_check_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6705,9 +6705,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.storage_addr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.storage_addr": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.storage_addr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.storage_addr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6720,9 +6720,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.syscall_ptr": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.syscall_ptr",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6743,9 +6743,9 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.value": {
+            "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.value": {
                 "cairo_type": "felt",
-                "full_name": "src.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.value",
+                "full_name": "starknet.contracts.amm_wrapper_library.AmmWrapper_jediswap_router.write.value",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6758,40 +6758,40 @@
                 ],
                 "type": "reference"
             },
-            "src.contracts.amm_wrapper_library.HashBuiltin": {
+            "starknet.contracts.amm_wrapper_library.HashBuiltin": {
                 "destination": "starkware.cairo.common.cairo_builtins.HashBuiltin",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.IFactory": {
-                "destination": "src.interfaces.i_factory.IFactory",
+            "starknet.contracts.amm_wrapper_library.IFactory": {
+                "destination": "starknet.interfaces.i_factory.IFactory",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.IJediSwapPair": {
-                "destination": "src.interfaces.i_pair.IJediSwapPair",
+            "starknet.contracts.amm_wrapper_library.IJediSwapPair": {
+                "destination": "starknet.interfaces.i_pair.IJediSwapPair",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.IRouter": {
-                "destination": "src.interfaces.i_router.IRouter",
+            "starknet.contracts.amm_wrapper_library.IRouter": {
+                "destination": "starknet.interfaces.i_router.IRouter",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.Node": {
-                "destination": "src.data_types.data_types.Node",
+            "starknet.contracts.amm_wrapper_library.Node": {
+                "destination": "starknet.data_types.data_types.Node",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.Pair": {
-                "destination": "src.data_types.data_types.Pair",
+            "starknet.contracts.amm_wrapper_library.Pair": {
+                "destination": "starknet.data_types.data_types.Pair",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.Uint256": {
+            "starknet.contracts.amm_wrapper_library.Uint256": {
                 "destination": "starkware.cairo.common.uint256.Uint256",
                 "type": "alias"
             },
-            "src.contracts.amm_wrapper_library.alloc": {
+            "starknet.contracts.amm_wrapper_library.alloc": {
                 "destination": "starkware.cairo.common.alloc.alloc",
                 "type": "alias"
             },
-            "src.data_types.data_types.Node": {
-                "full_name": "src.data_types.data_types.Node",
+            "starknet.data_types.data_types.Node": {
+                "full_name": "starknet.data_types.data_types.Node",
                 "members": {
                     "identifier": {
                         "cairo_type": "felt",
@@ -6802,15 +6802,15 @@
                         "offset": 0
                     },
                     "neighbor_nodes": {
-                        "cairo_type": "src.data_types.data_types.Node*",
+                        "cairo_type": "starknet.data_types.data_types.Node*",
                         "offset": 2
                     }
                 },
                 "size": 3,
                 "type": "struct"
             },
-            "src.data_types.data_types.Pair": {
-                "full_name": "src.data_types.data_types.Pair",
+            "starknet.data_types.data_types.Pair": {
+                "full_name": "starknet.data_types.data_types.Pair",
                 "members": {
                     "token_0": {
                         "cairo_type": "felt",
@@ -6824,80 +6824,80 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.interfaces.i_factory.IFactory": {
+            "starknet.interfaces.i_factory.IFactory": {
                 "type": "namespace"
             },
-            "src.interfaces.i_factory.IFactory.Args": {
-                "full_name": "src.interfaces.i_factory.IFactory.Args",
+            "starknet.interfaces.i_factory.IFactory.Args": {
+                "full_name": "starknet.interfaces.i_factory.IFactory.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.interfaces.i_factory.IFactory.CREATE_PAIR_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.CREATE_PAIR_SELECTOR": {
                 "type": "const",
                 "value": 228159840923688866406267525259648198173531539201120403522757104993212296565
             },
-            "src.interfaces.i_factory.IFactory.GET_ALL_PAIRS_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.GET_ALL_PAIRS_SELECTOR": {
                 "type": "const",
                 "value": 1759930265820703351643035302697625971707432005028261050427649059397189432945
             },
-            "src.interfaces.i_factory.IFactory.GET_FEE_TO_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.GET_FEE_TO_SELECTOR": {
                 "type": "const",
                 "value": 416552359073487126407474674615598391871911635364835463431709415783577092576
             },
-            "src.interfaces.i_factory.IFactory.GET_FEE_TO_SETTER_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.GET_FEE_TO_SETTER_SELECTOR": {
                 "type": "const",
                 "value": 1116338007079669895624531504944127045898701395207647800145550352913971141038
             },
-            "src.interfaces.i_factory.IFactory.GET_NUM_OF_PAIRS_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.GET_NUM_OF_PAIRS_SELECTOR": {
                 "type": "const",
                 "value": 1156982597065567443051248108731600688520191002591978661825969585876082075004
             },
-            "src.interfaces.i_factory.IFactory.GET_PAIR_CONTRACT_CLASS_HASH_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.GET_PAIR_CONTRACT_CLASS_HASH_SELECTOR": {
                 "type": "const",
                 "value": 1055089147080618782281821834325021228875556920186671343229178331674628741669
             },
-            "src.interfaces.i_factory.IFactory.GET_PAIR_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.GET_PAIR_SELECTOR": {
                 "type": "const",
                 "value": 1361884049818391466621639291137266571310943900493453366512002203017825139028
             },
-            "src.interfaces.i_factory.IFactory.ImplicitArgs": {
-                "full_name": "src.interfaces.i_factory.IFactory.ImplicitArgs",
+            "starknet.interfaces.i_factory.IFactory.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_factory.IFactory.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.interfaces.i_factory.IFactory.Return": {
+            "starknet.interfaces.i_factory.IFactory.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.interfaces.i_factory.IFactory.SET_FEE_TO_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.SET_FEE_TO_SELECTOR": {
                 "type": "const",
                 "value": 600562831220209512580997431114043751277383510345076027862164707330870437428
             },
-            "src.interfaces.i_factory.IFactory.SET_FEE_TO_SETTER_SELECTOR": {
+            "starknet.interfaces.i_factory.IFactory.SET_FEE_TO_SETTER_SELECTOR": {
                 "type": "const",
                 "value": 1080323847654630607279087615169556605783604782934684198260836771288365250736
             },
-            "src.interfaces.i_factory.IFactory.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_factory.IFactory.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.interfaces.i_factory.IFactory.alloc": {
+            "starknet.interfaces.i_factory.IFactory.alloc": {
                 "destination": "starkware.cairo.common.alloc.alloc",
                 "type": "alias"
             },
-            "src.interfaces.i_factory.IFactory.call_contract": {
+            "starknet.interfaces.i_factory.IFactory.call_contract": {
                 "destination": "starkware.starknet.common.syscalls.call_contract",
                 "type": "alias"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs": {
                 "decorators": [],
                 "pc": 114,
                 "type": "function"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.Args": {
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.Args",
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.Args": {
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.Args",
                 "members": {
                     "contract_address": {
                         "cairo_type": "felt",
@@ -6907,8 +6907,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.ImplicitArgs": {
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.ImplicitArgs",
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.ImplicitArgs",
                 "members": {
                     "range_check_ptr": {
                         "cairo_type": "felt",
@@ -6922,17 +6922,17 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.Return": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.Return": {
                 "cairo_type": "(all_pairs_len : felt, all_pairs : felt*)",
                 "type": "type_definition"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 1
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.__calldata_ptr": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.__calldata_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.__calldata_ptr",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.__calldata_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6945,9 +6945,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.__return_value_actual_size": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.__return_value_actual_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.__return_value_actual_size",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.__return_value_actual_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6960,9 +6960,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.__return_value_arg_all_pairs": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.__return_value_arg_all_pairs": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.__return_value_arg_all_pairs",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.__return_value_arg_all_pairs",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6975,9 +6975,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.__return_value_arg_all_pairs_len": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.__return_value_arg_all_pairs_len": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.__return_value_arg_all_pairs_len",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.__return_value_arg_all_pairs_len",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -6990,9 +6990,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.__return_value_ptr": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.__return_value_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.__return_value_ptr",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.__return_value_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7021,9 +7021,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.__temp11": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.__temp11": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.__temp11",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.__temp11",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7036,9 +7036,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.__temp12": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.__temp12": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.__temp12",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.__temp12",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7051,9 +7051,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.__temp13": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.__temp13": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.__temp13",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.__temp13",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7066,9 +7066,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.calldata_ptr_start": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.calldata_ptr_start": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.calldata_ptr_start",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.calldata_ptr_start",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7089,9 +7089,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.contract_address": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.contract_address": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.contract_address",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.contract_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7104,9 +7104,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.range_check_ptr": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.range_check_ptr",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7127,9 +7127,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.retdata": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.retdata": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.retdata",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.retdata",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7142,9 +7142,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.retdata_size": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.retdata_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.retdata_size",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.retdata_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7157,9 +7157,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_all_pairs.syscall_ptr": {
+            "starknet.interfaces.i_factory.IFactory.get_all_pairs.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_all_pairs.syscall_ptr",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_all_pairs.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7180,13 +7180,13 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair": {
+            "starknet.interfaces.i_factory.IFactory.get_pair": {
                 "decorators": [],
                 "pc": 90,
                 "type": "function"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.Args": {
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.Args",
+            "starknet.interfaces.i_factory.IFactory.get_pair.Args": {
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.Args",
                 "members": {
                     "contract_address": {
                         "cairo_type": "felt",
@@ -7204,8 +7204,8 @@
                 "size": 3,
                 "type": "struct"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.ImplicitArgs": {
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.ImplicitArgs",
+            "starknet.interfaces.i_factory.IFactory.get_pair.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.ImplicitArgs",
                 "members": {
                     "range_check_ptr": {
                         "cairo_type": "felt",
@@ -7219,17 +7219,17 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.Return": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.Return": {
                 "cairo_type": "(pair : felt)",
                 "type": "type_definition"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 1
             },
-            "src.interfaces.i_factory.IFactory.get_pair.__calldata_ptr": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.__calldata_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.__calldata_ptr",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.__calldata_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7258,9 +7258,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.__return_value_actual_size": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.__return_value_actual_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.__return_value_actual_size",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.__return_value_actual_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7273,9 +7273,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.__return_value_arg_pair": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.__return_value_arg_pair": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.__return_value_arg_pair",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.__return_value_arg_pair",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7288,9 +7288,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.__return_value_ptr": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.__return_value_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.__return_value_ptr",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.__return_value_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7311,9 +7311,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.__temp10": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.__temp10": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.__temp10",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.__temp10",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7326,9 +7326,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.__temp9": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.__temp9": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.__temp9",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.__temp9",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7341,9 +7341,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.calldata_ptr_start": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.calldata_ptr_start": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.calldata_ptr_start",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.calldata_ptr_start",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7364,9 +7364,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.contract_address": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.contract_address": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.contract_address",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.contract_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7379,9 +7379,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.range_check_ptr": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.range_check_ptr",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7394,9 +7394,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.retdata": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.retdata": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.retdata",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.retdata",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7409,9 +7409,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.retdata_size": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.retdata_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.retdata_size",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.retdata_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7424,9 +7424,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.syscall_ptr": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.syscall_ptr",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7447,9 +7447,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.token0": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.token0": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.token0",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.token0",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7462,9 +7462,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.get_pair.token1": {
+            "starknet.interfaces.i_factory.IFactory.get_pair.token1": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_factory.IFactory.get_pair.token1",
+                "full_name": "starknet.interfaces.i_factory.IFactory.get_pair.token1",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7477,96 +7477,96 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_factory.IFactory.library_call": {
+            "starknet.interfaces.i_factory.IFactory.library_call": {
                 "destination": "starkware.starknet.common.syscalls.library_call",
                 "type": "alias"
             },
-            "src.interfaces.i_factory.IFactory.memcpy": {
+            "starknet.interfaces.i_factory.IFactory.memcpy": {
                 "destination": "starkware.cairo.common.memcpy.memcpy",
                 "type": "alias"
             },
-            "src.interfaces.i_pair.IJediSwapPair": {
+            "starknet.interfaces.i_pair.IJediSwapPair": {
                 "type": "namespace"
             },
-            "src.interfaces.i_pair.IJediSwapPair.Args": {
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.Args",
+            "starknet.interfaces.i_pair.IJediSwapPair.Args": {
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.interfaces.i_pair.IJediSwapPair.BURN_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.BURN_SELECTOR": {
                 "type": "const",
                 "value": 110517590864022483288709273410208099989999878078159056510309951061542994625
             },
-            "src.interfaces.i_pair.IJediSwapPair.GET_RESERVES_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.GET_RESERVES_SELECTOR": {
                 "type": "const",
                 "value": 1715705677754146725544391220708589383422824993050994982749243481839397737234
             },
-            "src.interfaces.i_pair.IJediSwapPair.ImplicitArgs": {
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.ImplicitArgs",
+            "starknet.interfaces.i_pair.IJediSwapPair.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.interfaces.i_pair.IJediSwapPair.KLAST_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.KLAST_SELECTOR": {
                 "type": "const",
                 "value": 1554427988623332833875348107555827270862662089918452968421668474202506967487
             },
-            "src.interfaces.i_pair.IJediSwapPair.MINT_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.MINT_SELECTOR": {
                 "type": "const",
                 "value": 1329909728320632088402217562277154056711815095720684343816173432540100887380
             },
-            "src.interfaces.i_pair.IJediSwapPair.PRICE_0_CUMULATIVE_LAST_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.PRICE_0_CUMULATIVE_LAST_SELECTOR": {
                 "type": "const",
                 "value": 1383949984252977986849496013258165336333243232972068753049475488330408904355
             },
-            "src.interfaces.i_pair.IJediSwapPair.PRICE_1_CUMULATIVE_LAST_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.PRICE_1_CUMULATIVE_LAST_SELECTOR": {
                 "type": "const",
                 "value": 1410628160215088019979907209985574610579442049975918508279980764348528425924
             },
-            "src.interfaces.i_pair.IJediSwapPair.Return": {
+            "starknet.interfaces.i_pair.IJediSwapPair.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.interfaces.i_pair.IJediSwapPair.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_pair.IJediSwapPair.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.interfaces.i_pair.IJediSwapPair.SKIM_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.SKIM_SELECTOR": {
                 "type": "const",
                 "value": 1747538601516360396407907051741403270894503648215905123537683790718537266930
             },
-            "src.interfaces.i_pair.IJediSwapPair.SWAP_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.SWAP_SELECTOR": {
                 "type": "const",
                 "value": 602962535134499854912799851629033993488593928113527484350375636311213640489
             },
-            "src.interfaces.i_pair.IJediSwapPair.SYNC_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.SYNC_SELECTOR": {
                 "type": "const",
                 "value": 1299761075517847716454256427128057838691311715520180079595523995992969970717
             },
-            "src.interfaces.i_pair.IJediSwapPair.TOKEN0_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.TOKEN0_SELECTOR": {
                 "type": "const",
                 "value": 306308096504161546251901005091271441295396480158438431145345649511043910176
             },
-            "src.interfaces.i_pair.IJediSwapPair.TOKEN1_SELECTOR": {
+            "starknet.interfaces.i_pair.IJediSwapPair.TOKEN1_SELECTOR": {
                 "type": "const",
                 "value": 1528423166344164884778003319102070559163101217476907668203506001925807383112
             },
-            "src.interfaces.i_pair.IJediSwapPair.alloc": {
+            "starknet.interfaces.i_pair.IJediSwapPair.alloc": {
                 "destination": "starkware.cairo.common.alloc.alloc",
                 "type": "alias"
             },
-            "src.interfaces.i_pair.IJediSwapPair.call_contract": {
+            "starknet.interfaces.i_pair.IJediSwapPair.call_contract": {
                 "destination": "starkware.starknet.common.syscalls.call_contract",
                 "type": "alias"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves": {
                 "decorators": [],
                 "pc": 181,
                 "type": "function"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.Args": {
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.Args",
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.Args": {
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.Args",
                 "members": {
                     "contract_address": {
                         "cairo_type": "felt",
@@ -7576,8 +7576,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.ImplicitArgs": {
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.ImplicitArgs",
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.ImplicitArgs",
                 "members": {
                     "range_check_ptr": {
                         "cairo_type": "felt",
@@ -7591,17 +7591,17 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.Return": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.Return": {
                 "cairo_type": "(reserve0 : starkware.cairo.common.uint256.Uint256, reserve1 : starkware.cairo.common.uint256.Uint256, block_timestamp_last : felt)",
                 "type": "type_definition"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 1
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.__calldata_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__calldata_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.__calldata_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__calldata_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7614,9 +7614,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_actual_size": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_actual_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_actual_size",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_actual_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7629,9 +7629,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_block_timestamp_last": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_block_timestamp_last": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_block_timestamp_last",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_block_timestamp_last",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7644,9 +7644,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_reserve0": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_reserve0": {
                 "cairo_type": "starkware.cairo.common.uint256.Uint256",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_reserve0",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_reserve0",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7659,9 +7659,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_reserve1": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_reserve1": {
                 "cairo_type": "starkware.cairo.common.uint256.Uint256",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_reserve1",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_arg_reserve1",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7674,9 +7674,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__return_value_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7713,9 +7713,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.__temp16": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__temp16": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.__temp16",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.__temp16",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7728,9 +7728,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.calldata_ptr_start": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.calldata_ptr_start": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.calldata_ptr_start",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.calldata_ptr_start",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7751,9 +7751,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.contract_address": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.contract_address": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.contract_address",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.contract_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7766,9 +7766,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.range_check_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.range_check_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7781,9 +7781,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.retdata": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.retdata": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.retdata",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.retdata",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7796,9 +7796,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.retdata_size": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.retdata_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.retdata_size",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.retdata_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7811,9 +7811,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.get_reserves.syscall_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.get_reserves.syscall_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.get_reserves.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7834,21 +7834,21 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.library_call": {
+            "starknet.interfaces.i_pair.IJediSwapPair.library_call": {
                 "destination": "starkware.starknet.common.syscalls.library_call",
                 "type": "alias"
             },
-            "src.interfaces.i_pair.IJediSwapPair.memcpy": {
+            "starknet.interfaces.i_pair.IJediSwapPair.memcpy": {
                 "destination": "starkware.cairo.common.memcpy.memcpy",
                 "type": "alias"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0": {
                 "decorators": [],
                 "pc": 141,
                 "type": "function"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.Args": {
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.Args",
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.Args": {
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.Args",
                 "members": {
                     "contract_address": {
                         "cairo_type": "felt",
@@ -7858,8 +7858,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.ImplicitArgs": {
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.ImplicitArgs",
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.ImplicitArgs",
                 "members": {
                     "range_check_ptr": {
                         "cairo_type": "felt",
@@ -7873,17 +7873,17 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.Return": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.Return": {
                 "cairo_type": "(address : felt)",
                 "type": "type_definition"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 1
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.__calldata_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.__calldata_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.__calldata_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.__calldata_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7896,9 +7896,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.__return_value_actual_size": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.__return_value_actual_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.__return_value_actual_size",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.__return_value_actual_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7911,9 +7911,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.__return_value_arg_address": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.__return_value_arg_address": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.__return_value_arg_address",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.__return_value_arg_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7926,9 +7926,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.__return_value_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.__return_value_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.__return_value_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.__return_value_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7949,9 +7949,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.__temp14": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.__temp14": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.__temp14",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.__temp14",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7964,9 +7964,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.calldata_ptr_start": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.calldata_ptr_start": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.calldata_ptr_start",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.calldata_ptr_start",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -7987,9 +7987,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.contract_address": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.contract_address": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.contract_address",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.contract_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8002,9 +8002,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.range_check_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.range_check_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8017,9 +8017,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.retdata": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.retdata": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.retdata",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.retdata",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8032,9 +8032,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.retdata_size": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.retdata_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.retdata_size",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.retdata_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8047,9 +8047,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token0.syscall_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token0.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token0.syscall_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token0.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8070,13 +8070,13 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1": {
                 "decorators": [],
                 "pc": 161,
                 "type": "function"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.Args": {
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.Args",
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.Args": {
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.Args",
                 "members": {
                     "contract_address": {
                         "cairo_type": "felt",
@@ -8086,8 +8086,8 @@
                 "size": 1,
                 "type": "struct"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.ImplicitArgs": {
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.ImplicitArgs",
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.ImplicitArgs",
                 "members": {
                     "range_check_ptr": {
                         "cairo_type": "felt",
@@ -8101,17 +8101,17 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.Return": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.Return": {
                 "cairo_type": "(address : felt)",
                 "type": "type_definition"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 1
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.__calldata_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.__calldata_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.__calldata_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.__calldata_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8124,9 +8124,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.__return_value_actual_size": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.__return_value_actual_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.__return_value_actual_size",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.__return_value_actual_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8139,9 +8139,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.__return_value_arg_address": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.__return_value_arg_address": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.__return_value_arg_address",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.__return_value_arg_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8154,9 +8154,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.__return_value_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.__return_value_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.__return_value_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.__return_value_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8177,9 +8177,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.__temp15": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.__temp15": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.__temp15",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.__temp15",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8192,9 +8192,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.calldata_ptr_start": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.calldata_ptr_start": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.calldata_ptr_start",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.calldata_ptr_start",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8215,9 +8215,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.contract_address": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.contract_address": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.contract_address",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.contract_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8230,9 +8230,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.range_check_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.range_check_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8245,9 +8245,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.retdata": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.retdata": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.retdata",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.retdata",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8260,9 +8260,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.retdata_size": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.retdata_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.retdata_size",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.retdata_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8275,9 +8275,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.IJediSwapPair.token1.syscall_ptr": {
+            "starknet.interfaces.i_pair.IJediSwapPair.token1.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_pair.IJediSwapPair.token1.syscall_ptr",
+                "full_name": "starknet.interfaces.i_pair.IJediSwapPair.token1.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8298,92 +8298,92 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_pair.Uint256": {
+            "starknet.interfaces.i_pair.Uint256": {
                 "destination": "starkware.cairo.common.uint256.Uint256",
                 "type": "alias"
             },
-            "src.interfaces.i_router.IRouter": {
+            "starknet.interfaces.i_router.IRouter": {
                 "type": "namespace"
             },
-            "src.interfaces.i_router.IRouter.ADD_LIQUIDITY_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.ADD_LIQUIDITY_SELECTOR": {
                 "type": "const",
                 "value": 1271585942111654734125606951221628240160430040413791527265389999851511344752
             },
-            "src.interfaces.i_router.IRouter.Args": {
-                "full_name": "src.interfaces.i_router.IRouter.Args",
+            "starknet.interfaces.i_router.IRouter.Args": {
+                "full_name": "starknet.interfaces.i_router.IRouter.Args",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.interfaces.i_router.IRouter.FACTORY_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.FACTORY_SELECTOR": {
                 "type": "const",
                 "value": 1538326912630455655856823982658914110649009515883772798902956386584370530161
             },
-            "src.interfaces.i_router.IRouter.GET_AMOUNTS_IN_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.GET_AMOUNTS_IN_SELECTOR": {
                 "type": "const",
                 "value": 717090642240829889410633465689384004503418412794176969541863322742007450725
             },
-            "src.interfaces.i_router.IRouter.GET_AMOUNTS_OUT_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.GET_AMOUNTS_OUT_SELECTOR": {
                 "type": "const",
                 "value": 1544114163115011815335571033296884160831958766777219908207586860250867652764
             },
-            "src.interfaces.i_router.IRouter.GET_AMOUNT_IN_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.GET_AMOUNT_IN_SELECTOR": {
                 "type": "const",
                 "value": 1369314955784310940486616110116205110380568797587200238122714365430329737222
             },
-            "src.interfaces.i_router.IRouter.GET_AMOUNT_OUT_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.GET_AMOUNT_OUT_SELECTOR": {
                 "type": "const",
                 "value": 985351602711163636936891036462748731517852321990405299395721200665734703770
             },
-            "src.interfaces.i_router.IRouter.ImplicitArgs": {
-                "full_name": "src.interfaces.i_router.IRouter.ImplicitArgs",
+            "starknet.interfaces.i_router.IRouter.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_router.IRouter.ImplicitArgs",
                 "members": {},
                 "size": 0,
                 "type": "struct"
             },
-            "src.interfaces.i_router.IRouter.QUOTE_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.QUOTE_SELECTOR": {
                 "type": "const",
                 "value": 1602234863239929103146996131120769161547061307423597441505064026012741843711
             },
-            "src.interfaces.i_router.IRouter.REMOVE_LIQUIDITY_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.REMOVE_LIQUIDITY_SELECTOR": {
                 "type": "const",
                 "value": 1315347376254230191889656603376417976475423939919294213114941367349674453722
             },
-            "src.interfaces.i_router.IRouter.Return": {
+            "starknet.interfaces.i_router.IRouter.Return": {
                 "cairo_type": "()",
                 "type": "type_definition"
             },
-            "src.interfaces.i_router.IRouter.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_router.IRouter.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 0
             },
-            "src.interfaces.i_router.IRouter.SORT_TOKENS_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.SORT_TOKENS_SELECTOR": {
                 "type": "const",
                 "value": 525486690626335721124603498013048384312888420693440066177435467334393630904
             },
-            "src.interfaces.i_router.IRouter.SWAP_EXACT_TOKENS_FOR_TOKENS_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.SWAP_EXACT_TOKENS_FOR_TOKENS_SELECTOR": {
                 "type": "const",
                 "value": 1426565999849372202067242202088433764048928624912224385906297528280239424972
             },
-            "src.interfaces.i_router.IRouter.SWAP_TOKENS_FOR_EXACT_TOKENS_SELECTOR": {
+            "starknet.interfaces.i_router.IRouter.SWAP_TOKENS_FOR_EXACT_TOKENS_SELECTOR": {
                 "type": "const",
                 "value": 1670990928140491877826167847134796336079252006762544052648932373014744390317
             },
-            "src.interfaces.i_router.IRouter.alloc": {
+            "starknet.interfaces.i_router.IRouter.alloc": {
                 "destination": "starkware.cairo.common.alloc.alloc",
                 "type": "alias"
             },
-            "src.interfaces.i_router.IRouter.call_contract": {
+            "starknet.interfaces.i_router.IRouter.call_contract": {
                 "destination": "starkware.starknet.common.syscalls.call_contract",
                 "type": "alias"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out": {
                 "decorators": [],
                 "pc": 46,
                 "type": "function"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.Args": {
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.Args",
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.Args": {
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.Args",
                 "members": {
                     "amountIn": {
                         "cairo_type": "starkware.cairo.common.uint256.Uint256",
@@ -8405,8 +8405,8 @@
                 "size": 5,
                 "type": "struct"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.ImplicitArgs": {
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.ImplicitArgs",
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.ImplicitArgs": {
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.ImplicitArgs",
                 "members": {
                     "range_check_ptr": {
                         "cairo_type": "felt",
@@ -8420,17 +8420,17 @@
                 "size": 2,
                 "type": "struct"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.Return": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.Return": {
                 "cairo_type": "(amounts_len : felt, amounts : starkware.cairo.common.uint256.Uint256*)",
                 "type": "type_definition"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.SIZEOF_LOCALS": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.SIZEOF_LOCALS": {
                 "type": "const",
                 "value": 3
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__calldata_ptr": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__calldata_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__calldata_ptr",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__calldata_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8467,9 +8467,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__calldata_ptr_copy": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__calldata_ptr_copy": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__calldata_ptr_copy",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__calldata_ptr_copy",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8482,9 +8482,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__calldata_tmp": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__calldata_tmp": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__calldata_tmp",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__calldata_tmp",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8497,9 +8497,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__return_value_actual_size": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__return_value_actual_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__return_value_actual_size",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__return_value_actual_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8512,9 +8512,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__return_value_arg_amounts": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__return_value_arg_amounts": {
                 "cairo_type": "starkware.cairo.common.uint256.Uint256*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__return_value_arg_amounts",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__return_value_arg_amounts",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8527,9 +8527,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__return_value_arg_amounts_len": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__return_value_arg_amounts_len": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__return_value_arg_amounts_len",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__return_value_arg_amounts_len",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8542,9 +8542,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__return_value_ptr": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__return_value_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__return_value_ptr",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__return_value_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8573,9 +8573,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__temp4": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp4": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__temp4",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp4",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8588,9 +8588,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__temp5": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp5": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__temp5",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp5",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8603,9 +8603,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__temp6": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp6": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__temp6",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp6",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8618,9 +8618,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__temp7": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp7": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__temp7",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp7",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8633,9 +8633,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.__temp8": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp8": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.__temp8",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.__temp8",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8648,9 +8648,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.amountIn": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.amountIn": {
                 "cairo_type": "starkware.cairo.common.uint256.Uint256",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.amountIn",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.amountIn",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8663,9 +8663,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.calldata_ptr_start": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.calldata_ptr_start": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.calldata_ptr_start",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.calldata_ptr_start",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8686,9 +8686,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.contract_address": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.contract_address": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.contract_address",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.contract_address",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8701,9 +8701,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.path": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.path": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.path",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.path",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8716,9 +8716,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.path_len": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.path_len": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.path_len",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.path_len",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8731,9 +8731,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.range_check_ptr": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.range_check_ptr": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.range_check_ptr",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.range_check_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8762,9 +8762,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.retdata": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.retdata": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.retdata",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.retdata",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8777,9 +8777,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.retdata_size": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.retdata_size": {
                 "cairo_type": "felt",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.retdata_size",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.retdata_size",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8792,9 +8792,9 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.get_amounts_out.syscall_ptr": {
+            "starknet.interfaces.i_router.IRouter.get_amounts_out.syscall_ptr": {
                 "cairo_type": "felt*",
-                "full_name": "src.interfaces.i_router.IRouter.get_amounts_out.syscall_ptr",
+                "full_name": "starknet.interfaces.i_router.IRouter.get_amounts_out.syscall_ptr",
                 "references": [
                     {
                         "ap_tracking_data": {
@@ -8815,15 +8815,15 @@
                 ],
                 "type": "reference"
             },
-            "src.interfaces.i_router.IRouter.library_call": {
+            "starknet.interfaces.i_router.IRouter.library_call": {
                 "destination": "starkware.starknet.common.syscalls.library_call",
                 "type": "alias"
             },
-            "src.interfaces.i_router.IRouter.memcpy": {
+            "starknet.interfaces.i_router.IRouter.memcpy": {
                 "destination": "starkware.cairo.common.memcpy.memcpy",
                 "type": "alias"
             },
-            "src.interfaces.i_router.Uint256": {
+            "starknet.interfaces.i_router.Uint256": {
                 "destination": "starkware.cairo.common.uint256.Uint256",
                 "type": "alias"
             },
