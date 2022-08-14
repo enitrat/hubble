@@ -2,6 +2,28 @@
     {
         "members": [
             {
+                "name": "src_identifier",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "dst_identifier",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "weight",
+                "offset": 2,
+                "type": "felt"
+            }
+        ],
+        "name": "Edge",
+        "size": 3,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
                 "name": "low",
                 "offset": 0,
                 "type": "felt"
@@ -36,21 +58,37 @@
             {
                 "name": "token_to",
                 "type": "felt"
+            }
+        ],
+        "name": "get_minimal_route",
+        "outputs": [
+            {
+                "name": "path_len",
+                "type": "felt"
             },
             {
-                "name": "max_hops",
+                "name": "path",
+                "type": "felt*"
+            },
+            {
+                "name": "distance",
                 "type": "felt"
             }
         ],
-        "name": "get_all_routes",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_all_pairs",
         "outputs": [
             {
-                "name": "routes_len",
+                "name": "pairs_len",
                 "type": "felt"
             },
             {
-                "name": "routes",
-                "type": "felt*"
+                "name": "pairs",
+                "type": "Edge*"
             }
         ],
         "stateMutability": "view",
@@ -71,7 +109,7 @@
                 "type": "felt"
             }
         ],
-        "name": "get_all_routes_mock",
+        "name": "get_all_routes",
         "outputs": [
             {
                 "name": "routes_len",
