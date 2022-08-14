@@ -2,7 +2,7 @@
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.starknet.common.syscalls import get_contract_address
-from starknet.contracts.amm_wrapper_library import AmmWrapper
+from src.contracts.amm_wrapper_library import AmmWrapper
 from starkware.cairo.common.uint256 import Uint256
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.registers import get_fp_and_pc
@@ -21,6 +21,8 @@ const RESERVE_A_B_1_LOW = 26789
 const PAIR_A_B = 90174089
 const PAIR_A_C = 90182194
 const PAIR_A_D = 90712441
+
+# TODO remove these useless tests
 
 func before_each{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}():
     let (contract_address) = get_contract_address()
@@ -82,37 +84,5 @@ func test_get_reserves{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_c
     %{ stop_mock() %}
     assert res[0] = Uint256(RESERVE_A_B_0_LOW, 0)
     assert res[1] = Uint256(RESERVE_A_B_1_LOW, 0)
-    return ()
-end
-
-# --- graphe
-
-struct Node:
-    member edges : felt*
-end
-
-# a->b, a->c, b->c
-
-@view
-func test_graph():
-    alloc_locals
-    let (nodes : Node*) = alloc()
-    let (edges_a : felt*) = alloc()
-    let (edges_b : felt*) = alloc()
-    let (edges_c : felt*) = alloc()
-    assert edges_a[0] = TOKEN_B
-    assert edges_a[1] = TOKEN_C
-    assert edges_b[0] = TOKEN_A
-    assert edges_b[1] = TOKEN_C
-    assert edges_c[0] = TOKEN_A
-    assert edges_c[1] = TOKEN_B
-    tempvar node_a = Node(edges_a)
-    tempvar node_b = Node(edges_b)
-    tempvar node_c = Node(edges_c)
-    assert nodes[0] = node_a
-    assert nodes[0].edges[0] = TOKEN_B
-    assert nodes[0].edges[1] = TOKEN_C
-    assert nodes[1] = node_b
-    assert nodes[2] = node_c
     return ()
 end
