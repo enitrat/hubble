@@ -104,7 +104,7 @@ namespace Hubble:
 
         # TODO fix this function
         # end when all routes visited
-        if all_routes_len == 0:
+        if all_routes_len == 1:
             return (
                 current_best_route_len,
                 current_best_route,
