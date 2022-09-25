@@ -45,13 +45,9 @@ namespace Hubble {
         let (local parsed_pairs: Edge*) = alloc();
         let (parsed_pairs_len) = parse_all_pairs(all_pairs_len, all_pairs, parsed_pairs, 0);
 
-        let (graph_len, graph, adj_vertices_count) = GraphMethods.build_undirected_graph_from_edges(
-            parsed_pairs_len, parsed_pairs
-        );
+        let graph = GraphMethods.build_undirected_graph_from_edges(parsed_pairs_len, parsed_pairs);
 
-        let (path_len, path, distance) = Dijkstra.shortest_path(
-            graph_len, graph, adj_vertices_count, token_from, token_to
-        );
+        let (path_len, path, distance) = Dijkstra.shortest_path(graph, token_from, token_to);
         return (path_len, path, distance);
     }
 
@@ -65,79 +61,26 @@ namespace Hubble {
         let (local parsed_pairs: Edge*) = alloc();
         let (parsed_pairs_len) = parse_all_pairs(all_pairs_len, all_pairs, parsed_pairs, 0);
 
-        let (graph_len, graph, adj_vertices_count) = GraphMethods.build_undirected_graph_from_edges(
-            parsed_pairs_len, parsed_pairs
-        );
+        let graph = GraphMethods.build_undirected_graph_from_edges(parsed_pairs_len, parsed_pairs);
 
-        let (saved_paths_len, saved_paths) = init_dfs(
-            graph_len, graph, adj_vertices_count, token_from, token_to, max_hops
-        );
+        let (saved_paths_len, saved_paths) = init_dfs(graph, token_from, token_to, max_hops);
         return (saved_paths_len, saved_paths);
     }
 
     func get_best_route{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
         amount_in: Uint256, token_from: felt, token_to: felt, max_hops: felt
-    ) -> (route_len: felt, route: Uint256*, amount_out: Uint256) {
+    ) -> (route_len: felt, route: felt*, amount_out: Uint256) {
         let (amm_wrapper_address) = Hubble_amm_wrapper_address.read();
         let (all_routes_len, all_routes) = get_all_routes(token_from, token_to, max_hops);
 
-        let (best_route: Uint256*) = alloc();
-        // all routes[0] is the length of the first route, which starts at index = 1
-        let (best_route_len, best_route, amount_out) = _get_best_route(
-            amount_in,
-            all_routes_len,
-            all_routes,
-            current_best_route_len=0,
-            current_best_route=best_route,
-        );
+        let (best_route: felt*) = alloc();
+        let current_best_route_len = 0;
+        let current_best_route = best_route;
+        let current_best_amount = Uint256(0, 0);
+        with amount_in, all_routes_len, all_routes, current_best_route_len, current_best_route, current_best_amount {
+            let (best_route_len, best_route, amount_out) = _get_best_route(0);
+        }
         return (best_route_len, best_route, amount_out);
-    }
-
-    func _get_best_route{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-        amount_in: Uint256,
-        all_routes_len: felt,
-        all_routes: felt*,
-        current_best_route_len: felt,
-        current_best_route: Uint256*,
-    ) -> (best_route_len: felt, best_route: Uint256*, current_best_amount_out: Uint256) {
-        alloc_locals;
-
-        // TODO fix this function
-        // end when all routes visited
-        if (all_routes_len == 1) {
-            return (
-                current_best_route_len,
-                current_best_route,
-                current_best_route[current_best_route_len - Uint256.SIZE],
-            );
-        }
-
-        let route_to_eval_len = [all_routes];
-        let route_to_eval = all_routes + 1;
-        let (local amounts_len, local amounts, output_tokens) = evaluate_current_route(
-            amount_in, route_to_eval_len, route_to_eval
-        );
-
-        let current_best_amount: Uint256 = current_best_route[current_best_route_len - Uint256.SIZE];
-        let (is_new_route_better) = uint256_lt(current_best_amount, output_tokens);
-        if (is_new_route_better == 1) {
-            // decrement len by (1-> it stores route_len) + route_len that was evaluated
-            // tempvar pedersen_ptr = pedersen_ptr
-            return _get_best_route(
-                amount_in=amount_in,
-                all_routes_len=all_routes_len - route_to_eval_len + 1,
-                all_routes=all_routes + route_to_eval_len + 1,
-                current_best_route_len=amounts_len,
-                current_best_route=amounts,
-            );
-        }
-        return _get_best_route(
-            amount_in=amount_in,
-            all_routes_len=current_best_route_len - route_to_eval_len + 1,
-            all_routes=all_routes,
-            current_best_route_len=current_best_route_len,
-            current_best_route=current_best_route,
-        );
     }
 }
 
@@ -156,58 +99,48 @@ func parse_all_pairs{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check
     );
 }
 
-// func _get_best_route{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
-//     amount_in : Uint256,
-//     all_routes_len : felt,
-//     all_routes : felt*,
-//     current_best_route_len : felt,
-//     current_best_route : Uint256*,
-// ) -> (best_route_len : felt, best_route : Uint256*, current_best_amount_out : Uint256):
-//     alloc_locals
-//     # end when all routes visited
-//     if all_routes_len == 0:
-//         return (
-//             current_best_route_len,
-//             current_best_route,
-//             current_best_route[current_best_route_len - Uint256.SIZE],
-//         )
-//     end
+func _get_best_route{
+    syscall_ptr: felt*,
+    pedersen_ptr: HashBuiltin*,
+    range_check_ptr,
+    amount_in: Uint256,
+    all_routes_len: felt,
+    all_routes: felt*,
+    current_best_route_len: felt,
+    current_best_route: felt*,
+    current_best_amount: Uint256,
+}(index: felt) -> (best_route_len: felt, best_route: felt*, best_amount_out: Uint256) {
+    alloc_locals;
 
-// let route_to_eval_len = [all_routes]
-//     let route_to_eval = all_routes + 1
-//     let (local amounts_len, local amounts, output_tokens) = evaluate_current_route(
-//         amount_in, route_to_eval_len, route_to_eval
-//     )
+    if (index == all_routes_len) {
+        return (current_best_route_len, current_best_route, current_best_amount);
+    }
 
-// let current_best_amount : Uint256 = current_best_route[current_best_route_len - Uint256.SIZE]
-//     let (is_new_route_better) = uint256_lt(current_best_amount, output_tokens)
-//     if is_new_route_better == 1:
-//         # decrement len by (1-> it stores route_len) + route_len that was evaluated
-//         # tempvar pedersen_ptr = pedersen_ptr
-//         return _get_best_route(
-//             amount_in=amount_in,
-//             all_routes_len=all_routes_len - route_to_eval_len + 1,
-//             all_routes=all_routes + route_to_eval_len + 1,
-//             current_best_route_len=amounts_len,
-//             current_best_route=amounts,
-//         )
-//     end
-//     return _get_best_route(
-//         amount_in=amount_in,
-//         all_routes_len=current_best_route_len - route_to_eval_len + 1,
-//         all_routes=all_routes,
-//         current_best_route_len=current_best_route_len,
-//         current_best_route=current_best_route,
-//     )
-// end
+    // evaluate current route
+    let route_to_eval_len = all_routes[index];  // first element of the route is its length
+    let route_to_eval = all_routes + index + 1;  // route_to_eval is a pointer to the first element of the path sub-array
+    let next_route_index = index + route_to_eval_len + 1;  // index of the next route length
+
+    let (local amounts_len, local amounts, output_tokens) = evaluate_current_route(
+        amount_in, route_to_eval_len, route_to_eval
+    );
+    let (is_new_route_better) = uint256_lt(current_best_amount, output_tokens);
+    if (is_new_route_better == 1) {
+        // update best route
+        return _get_best_route{
+            current_best_route_len=route_to_eval_len,
+            current_best_route=route_to_eval,
+            current_best_amount=output_tokens,
+        }(next_route_index);
+    }
+    return _get_best_route(next_route_index);
+}
 
 func evaluate_current_route{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     amount_in: Uint256, route_len: felt, route: felt*
 ) -> (amounts_len: felt, amounts: Uint256*, output_tokens: Uint256) {
     alloc_locals;
-    // TODO fix this function
     let (amm_wrapper_address) = Hubble_amm_wrapper_address.read();
-    local pedersen_ptr: HashBuiltin* = pedersen_ptr;
     let (amounts_len, amounts) = IAmmWrapper.get_amounts_out(
         amm_wrapper_address, amount_in, route_len, route
     );

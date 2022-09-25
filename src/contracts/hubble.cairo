@@ -38,6 +38,6 @@ func get_all_routes{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_
 @view
 func get_best_route{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     amount_in: Uint256, token_from: felt, token_to: felt, max_hops: felt
-) -> (route_len: felt, route: Uint256*, amount_out: Uint256) {
+) -> (route_len: felt, route: felt*, amount_out: Uint256) {
     return Hubble.get_best_route(amount_in, token_from, token_to, max_hops);
 }

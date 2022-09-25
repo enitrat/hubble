@@ -1,5 +1,3 @@
 .idea
 hubble.iml
-node_modules/
-.next
-front-end/node_modules
+build

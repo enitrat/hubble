@@ -5,7 +5,6 @@ from starkware.starknet.common.syscalls import get_contract_address
 from src.contracts.amm_wrapper_library import AmmWrapper
 from starkware.cairo.common.uint256 import Uint256
 from starkware.cairo.common.alloc import alloc
-from starkware.cairo.common.registers import get_fp_and_pc
 
 const JEDI_ROUTER = 19876081725;
 const JEDI_FACTORY = 1786125;
